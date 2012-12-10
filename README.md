@@ -1,12 +1,38 @@
 Welcome to Everyplay. To get started, make sure you have an account registered, and that you have a unique client ID
 for your game. You can get these along with the latest integration instructions at https://developers.everyplay.com/
 
+You can always download the latest SDK upgrades directly from https://github.com/everyplay/everyplay-ios-sdk
+
 Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 
 
 Everyplay SDK - Release Notes
 =============================
 
+
+### v1.0.2 - December 10th 2012
+
+- Generic:
+    - Fixes related to 16bit MSAA framebuffer handling
+
+    - Fixed video player for showing loading spinner for no reason
+
+    - Video player controls fade away more reliably
+
+    - Video player play/pause button changed location after certain internal
+      state changes, fixed
+
+- Unity plugin:
+    - Improved graphics pipeline integration. Now works for both Unity 3.5 and 4.0 in
+      16/32bit mode, with MSAA anti-aliased rendering and supports Unity4's new target
+      resolution capability
+
+    - Fixed small memory leak with EveryplayThumbnailReadyAtFilePath
+
+- Cocos2d:
+    - Early support for integrating into Cocos2d 1.x, 2.x and Cocos2d-x graphics pipelines
+      with no source code changes required. You'll only need to initialize Everyplay and
+      set client id and secret as with any other engine using Objective-C API
 
 ### v1.0.1 - December 4th 2012
 

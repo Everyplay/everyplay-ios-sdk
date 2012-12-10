@@ -45,6 +45,8 @@
 
 - (void)setActiveFramebufferCallback:(void (^)(GLuint activeFramebuffer))callback;
 
+- (GLuint)msaaFramebuffer:(GLuint)msaaFramebufferRef;
+
 - (BOOL)beforePresentRenderbuffer:(GLuint)framebufferRef;
 
 - (BOOL)afterPresentRenderbuffer;
