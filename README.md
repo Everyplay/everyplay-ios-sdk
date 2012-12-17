@@ -10,6 +10,26 @@ Everyplay SDK - Release Notes
 =============================
 
 
+### v1.0.3 - December 17th 2012
+
+- Generic:
+    - iPod background music no longer goes muted when the application starts,
+      however it won't be recorded to gameplay video
+
+    - Using OpenGL ES1 with multitexturing caused some screen flickering
+      while recording, fixed
+
+    - If the developer manually pauses recording before the application goes to
+      background, recording no longer automatically resumes when coming back.
+      Instead, it's up to developer to resume it
+
+    - Touching trimmer controls in the video player work better
+
+    - Ability for webview to trigger fullscreen mode (wo/ native topbar or sidebar),
+      for future features
+
+    - User canceling authentication now triggers better events for internal use
+
 ### v1.0.2 - December 10th 2012
 
 - Generic:
