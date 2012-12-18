@@ -9,6 +9,15 @@ Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apac
 Everyplay SDK - Release Notes
 =============================
 
+### v1.0.4 - December 18th 2012
+
+- Generic:
+    - Some games triggered screen tearing to the recorded movie files
+      on iPad retina resolution, fixed
+
+    - Some streamed video files resulted to a black frame at the end of video, fixed
+
+    - Entering Everyplay view could cause a crash while updating sidebar contents, fixed
 
 ### v1.0.3 - December 17th 2012
 
