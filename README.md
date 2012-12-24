@@ -9,6 +9,16 @@ Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apac
 Everyplay SDK - Release Notes
 =============================
 
+### v1.0.5 - December 24th 2012
+
+- Generic:
+    - Good things come in small packages and this release focuses on
+      optimizing OpenGL memory usage. Depending on device and resolution,
+      you'll likely save at least 13*(width*height)/1024/1024 megabytes
+      for other needs. Happy holidays!
+
+    - Fixed generic tiny memory leaks that ARC didn't handle
+
 ### v1.0.4 - December 18th 2012
 
 - Generic:
