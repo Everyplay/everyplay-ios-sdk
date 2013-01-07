@@ -9,6 +9,19 @@ Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apac
 Everyplay SDK - Release Notes
 =============================
 
+### v1.0.6 - January 7th 2013
+
+- Generic:
+    - Two video playback related methods added, playVideoWithURL: and playVideoWithDictionary:
+    - Fixed audio related crash on iOS simulator
+    - Fixed OAuth2/login flow related view handling and crashes
+    - Fixed off-by-one bug related to resumed uploads.
+      There's a server-side workaround for older builds
+
+- Examples:
+    - Examples for using Everyplay server API and native OpenGL/audio released!
+      Check out https://github.com/Everyplay/everyplay-ios-examples
+
 ### v1.0.5 - December 24th 2012
 
 - Generic:

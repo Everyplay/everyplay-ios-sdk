@@ -99,6 +99,10 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 
 - (void)mergeSessionDeveloperData:(NSDictionary *)dictionary;
 
+#pragma mark - Video playback
+- (void)playVideoWithURL:(NSURL *)videoURL;
+- (void)playVideoWithDictionary:(NSDictionary *)videoDictionary;
+
 #pragma mark - Manage Accounts
 + (EveryplayAccount *)account;
 
