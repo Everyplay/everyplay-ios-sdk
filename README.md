@@ -23,9 +23,9 @@ Everyplay SDK - Release Notes
 
 - Examples:
     - See Cocos2d examples at our forked cocos2d repositories at
-      https://github.com/Everyplay/cocos2d-iphone/tree/master-v2
-      https://github.com/Everyplay/cocos2d-iphone/tree/master
-      https://github.com/Everyplay/cocos2d-x
+        - https://github.com/Everyplay/cocos2d-iphone/tree/master-v2
+        - https://github.com/Everyplay/cocos2d-iphone/tree/master
+        - https://github.com/Everyplay/cocos2d-x
 
 ### v1.0.6 - January 7th 2013
 
