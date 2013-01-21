@@ -9,6 +9,24 @@ Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apac
 Everyplay SDK - Release Notes
 =============================
 
+### v1.0.7 - January 21st 2013
+
+- Generic
+    - Background upload support
+    - Video player shows related videos after the current video ends
+    - New initialization method initWithDelegate:andAddRootViewControllerForView:
+      for apps without existing view controller
+
+- Cocos2d
+    - More throughly tested support for Cocos2d 1.x, 2.x and Cocos2d-x!
+      See online integration walkthrough at https://developers.everyplay.com/doc
+
+- Examples:
+    - See Cocos2d examples at our forked cocos2d repositories at
+      https://github.com/Everyplay/cocos2d-iphone/tree/master-v2
+      https://github.com/Everyplay/cocos2d-iphone/tree/master
+      https://github.com/Everyplay/cocos2d-x
+
 ### v1.0.6 - January 7th 2013
 
 - Generic:

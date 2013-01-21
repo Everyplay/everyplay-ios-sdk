@@ -91,6 +91,7 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 
 + (Everyplay *)initWithDelegate:(id <EveryplayDelegate>)everyplayDelegate;
 + (Everyplay *)initWithDelegate:(id <EveryplayDelegate>)everyplayDelegate andParentViewController:(UIViewController *)viewController;
++ (Everyplay *)initWithDelegate:(id <EveryplayDelegate>)everyplayDelegate andAddRootViewControllerForView:(UIView *)view;
 
 #pragma mark - Public Methods
 - (void)showEveryplay;
