@@ -9,15 +9,49 @@ Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apac
 Everyplay SDK - Release Notes
 =============================
 
+### v1.0.8 - February 4th 2013
+
+- Generic:
+    - Optimized framerate consistency and timing for the recorded video
+
+    - Improved audio and video synchronization for the recorded video
+
+    - Everyplay.bundle: Removed device specific splash screens,
+      reducing the space required for the graphics by 50%
+
+    - Some games triggered screen tearing to the recorded movie files
+      on iPad retina resolution, fixed
+
+    - Video player: Fixed replay button behaviour on iOS 5 and
+      touch area handling after changing the orientation
+
+    - Optimized loading of Everyplay view via data prefetch
+
+    - Improved analytics
+
+- Cocos2d:
+    - Now supports cocos2d-iphone v2.1-rc0
+
+- Unity plugin:
+    - Changing orientation between landscape and portrait mode resulted to skewed
+      graphics buffer when returning back from Everyplay view to the game, Everyplay
+      plugin now triggers a forced orientation check. For apps supporting all
+      orientations for gameplay, it's recommended to lock orientation using
+      RecordingStarted/RecordingStopped delegates when recording.
+
+    - Added WasClosed delegate that triggers when returning back to the game
+
+    - EveryplayTest script now warns when trying to trigger functionality on editor
+
 ### v1.0.7 - January 21st 2013
 
-- Generic
+- Generic:
     - Background upload support
     - Video player shows related videos after the current video ends
     - New initialization method initWithDelegate:andAddRootViewControllerForView:
       for apps without existing view controller
 
-- Cocos2d
+- Cocos2d:
     - More throughly tested support for Cocos2d 1.x, 2.x and Cocos2d-x!
       See online integration walkthrough at https://developers.everyplay.com/doc
 
