@@ -9,6 +9,36 @@ Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apac
 Everyplay SDK - Release Notes
 =============================
 
+### v1.0.9 - February 11th 2013
+
+- Generic:
+    - New login flow for faster sharing: New users now immediately gain an Everyplay
+      account when sharing their first replay. No email is required and the username
+      is optional
+
+    - HUD-less recording support: Now you can record gameplay without UI elements
+
+      Call [[[Everyplay sharedInstance] capture] snapshotRenderbuffer]; after
+      you've drawn the core elements of your game, done
+
+    - Continuous recording support, especially suitable for longer online gaming
+      sessions. If the recording session goes over the maximum length set,
+      the resulting video will have the content recorded within last N minutes
+
+      Set [[Everyplay sharedInstance] capture].maxRecordingMinutesLength property
+      to your preferred value, done
+
+    - More improvements to framerate consistency on recorded video
+
+    - Free disk space monitoring and related error handling
+
+    - Fixed audio related crash with multiple audio sources
+
+- Unity plugin:
+    - Added two new methods:
+      - public bool SnapshotRenderbuffer();
+      - public void SetMaxRecordingMinutesLength(int minutes);
+
 ### v1.0.8 - February 4th 2013
 
 - Generic:

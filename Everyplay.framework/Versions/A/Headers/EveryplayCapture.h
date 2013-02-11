@@ -29,8 +29,18 @@
 
 @interface EveryplayCapture : NSObject<AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate>;
 
+/* Set target framerate for the video, defaults to 30fps. (Valid values: 30, 20, 15) */
 @property (nonatomic, assign) NSUInteger targetFPS;
+/* Set video quality, defaults to 2. (Valid values: 1-4) */
 @property (nonatomic, assign) NSUInteger motionFactor;
+/*
+ * Set maximum recording length in minutes, defaults to unlimited.
+ *
+ * If the recording session goes over the maximum length set, the resulting
+ * video will have the content recorded within last N minutes, which is suitable
+ * especially for online games.
+ */
+@property (nonatomic, assign) NSUInteger maxRecordingMinutesLength;
 
 @property (nonatomic, readonly) BOOL isRecording;
 @property (nonatomic, readonly) BOOL isPaused;
@@ -46,6 +56,8 @@
 - (void)setActiveFramebufferCallback:(void (^)(GLuint activeFramebuffer))callback;
 
 - (GLuint)msaaFramebuffer:(GLuint)msaaFramebufferRef;
+
+- (BOOL)snapshotRenderbuffer;
 
 - (BOOL)beforePresentRenderbuffer:(GLuint)framebufferRef;
 
