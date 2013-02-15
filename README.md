@@ -9,6 +9,13 @@ Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apac
 Everyplay SDK - Release Notes
 =============================
 
+### v1.0.10 - February 15th 2013
+
+- Generic:
+    - Fixed a rare audio encoder related crash when stopping the recording
+
+    - OpenGL fix for multiple camera viewport usage
+
 ### v1.0.9 - February 11th 2013
 
 - Generic:

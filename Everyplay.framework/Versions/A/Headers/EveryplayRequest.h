@@ -218,7 +218,7 @@ sendingProgressHandler:(EveryplayRequestSendingProgressHandler)progressHandler
 - (void)performRequestWithSendingProgressHandler:(EveryplayRequestSendingProgressHandler)progressHandler
                                  responseHandler:(EveryplayRequestResponseHandler)responseHandler;
 
-#pragma Cancel Request
+#pragma mark Cancel Request
 
 /*!
  @method
