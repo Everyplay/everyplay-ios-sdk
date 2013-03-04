@@ -42,6 +42,19 @@
  */
 @property (nonatomic, assign) NSUInteger maxRecordingMinutesLength;
 
+/* Optimize for low memory devices, disabled by default. */
+@property (nonatomic, assign) BOOL lowMemoryDevice;
+/*
+ * Disable recording support for single-core CPU devices
+ *
+ * Depending on a game and the device, recording a gameplay
+ * may be too heavy on CPU/memory resources left.
+ */
+@property (nonatomic, assign) BOOL disableSingleCoreDevices;
+
+@property (nonatomic, readonly) BOOL isSingleCoreDevice;
+
+@property (nonatomic, readonly) BOOL isRecordingSupported;
 @property (nonatomic, readonly) BOOL isRecording;
 @property (nonatomic, readonly) BOOL isPaused;
 

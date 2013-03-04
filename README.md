@@ -9,6 +9,46 @@ Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apac
 Everyplay SDK - Release Notes
 =============================
 
+### v1.0.11 - March 4th 2013
+
+- Generic:
+    - Faster sharing: It's now possible to directly share gameplays without
+      creating an Everyplay account by using iOS 5+ Twitter and iOS 6+ Social
+      frameworks. Sharing by mail has been extended to work from the first
+      share dialog, previously it was limited to re-sharing
+
+    - Improved framerate for the recorded video when the GPU is heavily
+      utilized, also helping some older generation single-core devices
+      like iPhone 4 and iPad 1
+
+    - Added disableSingleCoreDevices boolean property to EveryplayCapture,
+      to disable recording on devices with A4 chip or older
+
+    - Added lowMemoryDevice boolean property to EveryplayCapture,
+      to optimize memory usage at the cost of performance
+
+    - Memory optimization fixes after leaving Everyplay view
+
+    - Added [[Everyplay sharedInstance] showEveryplayWithPath:] method for
+      navigating directly to a certain view, such as game id specific feeds
+
+- Unity plugin:
+    - Post-processing script now also tries to locate Everyplay.framework
+      and bundle from your Unity project directory without using Spotlight,
+      improving usability on constant integration / build machines
+
+    - Post-processing script now weak links Twitter (iOS5+) and Social (iOS6+)
+      frameworks to your project
+
+    - Additional fixes to skewed graphics buffer if the orientation has changed
+      between portrait and landscape modes when coming back from Everyplay view
+      to the game
+
+    - Added three new methods:
+      - public void SetDisableSingleCoreDevices(bool state);
+      - public void SetLowMemoryDevice(bool state);
+      - public void ShowWithPath(string path);
+
 ### v1.0.10 - February 15th 2013
 
 - Generic:

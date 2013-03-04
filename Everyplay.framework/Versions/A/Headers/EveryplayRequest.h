@@ -20,6 +20,7 @@
 typedef void(^EveryplayRequestResponseHandler)(NSURLResponse *response, NSData *responseData, NSError *error);
 typedef void(^EveryplayRequestSendingProgressHandler)(unsigned long long bytesSend, unsigned long long bytesTotal);
 
+
 enum EveryplayRequestMethod {
     EveryplayRequestMethodGET = 0,
     EveryplayRequestMethodPOST,
@@ -28,6 +29,7 @@ enum EveryplayRequestMethod {
     EveryplayRequestMethodHEAD
 };
 typedef enum EveryplayRequestMethod EveryplayRequestMethod;
+
 
 @class NXOAuth2Request;
 @class EveryplayAccount;
@@ -61,6 +63,7 @@ typedef enum EveryplayRequestMethod EveryplayRequestMethod;
 
 #pragma mark Class Methods
 
+
 /*!
  @method
  
@@ -79,6 +82,8 @@ typedef enum EveryplayRequestMethod EveryplayRequestMethod;
 sendingProgressHandler:(EveryplayRequestSendingProgressHandler)progressHandler
        responseHandler:(EveryplayRequestResponseHandler)responseHandler;
 
+
+
 /*!
  @method
  
@@ -96,6 +101,7 @@ sendingProgressHandler:(EveryplayRequestSendingProgressHandler)progressHandler
            withClientId:(NSString *)clientId
 sendingProgressHandler:(EveryplayRequestSendingProgressHandler)progressHandler
        responseHandler:(EveryplayRequestResponseHandler)responseHandler;
+
 
 /*!
  @method
@@ -128,6 +134,13 @@ sendingProgressHandler:(EveryplayRequestSendingProgressHandler)progressHandler
 + (id)   createRequestWithMethod:(EveryplayRequestMethod)aMethod
                       onResource:(NSURL *)aResource
                  usingParameters:(NSDictionary *)someParameters;
+
+
++ (id)   createRequestWithMethod:(EveryplayRequestMethod)aMethod
+                      onResource:(NSURL *)aResource
+                     withAccount:(EveryplayAccount *)account
+                 usingParameters:(NSDictionary *)someParameters;
+
 
 /*!
  @method
@@ -228,5 +241,7 @@ sendingProgressHandler:(EveryplayRequestSendingProgressHandler)progressHandler
 
  */
 - (void)cancel;
+
+
 
 @end

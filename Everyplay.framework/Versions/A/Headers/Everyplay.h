@@ -95,6 +95,7 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 
 #pragma mark - Public Methods
 - (void)showEveryplay;
+- (void)showEveryplayWithPath:(NSString *)path;
 - (void)hideEveryplay;
 - (void)playLastRecording;
 
