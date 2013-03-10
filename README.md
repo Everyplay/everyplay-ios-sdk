@@ -9,6 +9,18 @@ Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apac
 Everyplay SDK - Release Notes
 =============================
 
+### v1.0.12 - March 10th 2013
+
+- Generic:
+    - GPU optimizations in SDK v1.0.11 broke 16bit MSAA recording support and
+      Unity 4 Target Resolution support for non-native resolutions, fixed
+
+    - In some cases the video player showed the wrong icon in Get from
+      App Store button, fixed
+
+    - Fixed a rare bug in video trimming that resulted to trimming
+      operation not finishing in time
+
 ### v1.0.11 - March 4th 2013
 
 - Generic:
