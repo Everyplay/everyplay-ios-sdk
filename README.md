@@ -9,6 +9,21 @@ Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apac
 Everyplay SDK - Release Notes
 =============================
 
+### v1.0.13 - March 16th 2013
+
+- Generic:
+    - Fixed an issue with single-core retina devices (iPhone 4) and Unity 4
+      target resolution mode that led to video resolution being too small,
+      doesn't affect native resolution usage
+
+- Unity plugin:
+    - Now supports Unity 3.5, 4.0 and 4.1 series! To upgrade, re-import
+      Everyplay.unitypackage into your project and rebuild Xcode project
+      from scratch
+
+    - Spotlight search for locating Everyplay.framework failed from
+      folders with spaces, fixed
+
 ### v1.0.12 - March 10th 2013
 
 - Generic:
