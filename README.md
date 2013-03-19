@@ -9,6 +9,12 @@ Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apac
 Everyplay SDK - Release Notes
 =============================
 
+### v1.0.14 - March 19th 2013
+
+- Generic:
+    - Repeated pauseRecording/resumeRecording calls could lead to audio and
+      video being out of sync or result to video being unplayable, fixed
+
 ### v1.0.13 - March 16th 2013
 
 - Generic:
