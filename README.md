@@ -9,6 +9,26 @@ Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apac
 Everyplay SDK - Release Notes
 =============================
 
+### v1.2 - April 3rd 2013
+
+- Generic:
+    - Fixed a rare crash after the uploading has begun
+
+    - Optimized framerate consistency and timing for the recorded video
+      on some edge cases, such as..
+
+- UE3:
+    - Early support for Unreal Engine 3! For registered Unreal Engine 3 Developers
+      only (excluding UDK), please contact us. Demo videos available at
+      https://everyplay.com/epic-citadel
+
+- Cocos2d:
+    - Fixed a rare view handling issue where the graphics could be left
+      in a wrong state after bringing in another view and returning from it
+
+- Unity plugin:
+      - New method to increase video quality, public void SetMotionFactor(int factor)
+
 ### v1.0.14 - March 19th 2013
 
 - Generic:

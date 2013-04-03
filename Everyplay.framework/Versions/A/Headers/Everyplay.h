@@ -68,6 +68,7 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 - (void)everyplayShown;
 - (void)everyplayHidden;
 @optional
+- (void)everyplayReadyForRecording:(NSNumber *)enabled;
 - (void)everyplayRecordingStarted;
 - (void)everyplayRecordingStopped;
 
