@@ -9,6 +9,51 @@ Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apac
 Everyplay SDK - Release Notes
 =============================
 
+### v1.3 - April 18th 2013
+
+- Generic:
+    - OpenAL and CocosDenshion background music support
+
+    - Added EveryplaySoundEngine class for simple audio playing needs without
+      using OpenAL or CocosDenshion
+
+    - The build version used is now printed to the console on app launch, to help
+      figuring out if Xcode incorrectly links against wrong Everyplay.framework
+      version on some upgrade cases. The build version can also be checked from
+      Everyplay views Settings tab on older releases
+
+    - Calling showEveryplay method from a non-main/web thread could result to
+      a crash, fixed
+
+    - Fixed a minor video framerate regression on single-core devices after the
+      recent UE3 optimization
+
+    - Some videoplayer state handling and return from background fixes
+
+- Everyplay OpenAL:
+
+    - Introducing Everyplay OpenAL (beta), supporting the basic OpenAL use cases
+      of a common iOS game or 3rdparty audio libraries such as CocosDenshion.
+      Please contact us if you use a feature that's currently not implemented!
+      If you encounter implementation bugs, please provide a working test case
+      if possible
+
+    - Known issues:
+
+        - alBufferDataStatic behaves the same as alBufferData, so it'll allocate
+          sound buffers internally
+
+        - Spatial audio support is partly implemented for the first release
+
+        - No support for setting the output sample rate through
+          alcMacOSXMixerOutputRate extension yet
+
+        - When used with CocosDenshion, the background audio music is streamed
+          but no hardware decoding support yet for MP3/AAC
+
+- Unity plugin:
+      - New method to set target FPS, public void SetTargetFPS(int fps)
+
 ### v1.2 - April 3rd 2013
 
 - Generic:

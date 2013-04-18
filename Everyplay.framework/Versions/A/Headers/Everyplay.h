@@ -21,6 +21,7 @@
 #import "EveryplayCapture.h"
 #import "EveryplayAccount.h"
 #import "EveryplayRequest.h"
+#import "EveryplaySoundEngine.h"
 
 #pragma mark - Developer metadata
 static NSString * const kEveryplayMetadataScoreInteger = @"score";
@@ -51,6 +52,23 @@ extern NSString * const EveryplayDidFailToRequestAccessNotification;
 typedef void(^EveryplayAccessRequestCompletionHandler)(NSError *error);
 typedef void(^EveryplayPreparedAuthorizationURLHandler)(NSURL *preparedURL);
 typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
+
+#pragma mark - Compile-time options
+
+@interface EveryplayFeatures : NSObject
+/*
+ * To disable Everyplay OpenAL implementation, override this class
+ * method to return NO.
+ */
++ (BOOL) supportsOpenAL;
+
+/*
+ * CocosDenshion background music support currently lacks hardware
+ * decoder support. To disable recording support for background music,
+ * override this class method to return NO.
+ */
++ (BOOL) supportsCocosDenshion;
+@end
 
 #pragma mark -
 
