@@ -9,6 +9,12 @@ Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apac
 Everyplay SDK - Release Notes
 =============================
 
+### v1.3.1 - April 20th 2013
+
+- Everyplay OpenAL:
+    - Improved state handling, there was an issue that got triggered with
+      CocosDenshion pauseAllEffects/resumeAllEffects calls
+
 ### v1.3 - April 18th 2013
 
 - Generic:
