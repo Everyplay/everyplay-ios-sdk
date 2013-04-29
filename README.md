@@ -5,17 +5,55 @@ You can always download the latest SDK upgrades directly from https://github.com
 
 Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 
+For now, each SDK release has an expiration date. After expiring, there's a warning dialog on launch
+that recommends to upgrade the SDK. Apps downloaded from the App Store won't have this behaviour.
+
+Current and previous expiration dates:
+
+- 2013-05-31 (releases from 1.0.13 to CURRENT)
+- 2013-03-31 (releases from 1.0.10 to 1.0.12)
+- 2013-02-28 (releases from 1.0 to 1.0.9)
 
 Everyplay SDK - Release Notes
 =============================
 
-### v1.3.1 - April 20th 2013
+### v1.4 - April 29th 2013 (build 1400)
+
+- Generic:
+
+    - New feature: FaceCam turns replays into stories. Users can now add audio
+      and video commentary easily to their replays to talk about their gaming
+      moments, share funny commentary and liven it up!
+
+    - Many enhancements and bug fixes to the video player, including better
+      touch area handling. The video player also doesn't use EveryplayVideoPlayer.xib
+      from Everyplay.bundle anymore, leading to faster memory management in
+      some cases
+
+    - Improved PNG size optimizations for Everyplay.bundle, taking less space for
+      .IPA packages even after including new assets for the video editor / FaceCam
+      functionality
+
+    - New audio recording core
+
+    - There was a potential video framerate issue with 1.2 SDK and later when
+      triggering pause/resume recording, fixed
+
+    - Possible bug fixes to some rare crash logs that we've received, but
+      haven't managed to reproduce
+
+- EveryplaySoundEngine:
+
+    - Fixed a rare crash when the app wakes up from the background
+      and continues playing streaming background music
+
+### v1.3.1 - April 20th 2013 (build 1310)
 
 - Everyplay OpenAL:
     - Improved state handling, there was an issue that got triggered with
       CocosDenshion pauseAllEffects/resumeAllEffects calls
 
-### v1.3 - April 18th 2013
+### v1.3 - April 18th 2013 (build 1300)
 
 - Generic:
     - OpenAL and CocosDenshion background music support
@@ -60,7 +98,7 @@ Everyplay SDK - Release Notes
 - Unity plugin:
       - New method to set target FPS, public void SetTargetFPS(int fps)
 
-### v1.2 - April 3rd 2013
+### v1.2 - April 3rd 2013 (build 1200)
 
 - Generic:
     - Fixed a rare crash after the uploading has begun
@@ -80,13 +118,13 @@ Everyplay SDK - Release Notes
 - Unity plugin:
       - New method to increase video quality, public void SetMotionFactor(int factor)
 
-### v1.0.14 - March 19th 2013
+### v1.0.14 - March 19th 2013 (build 15)
 
 - Generic:
     - Repeated pauseRecording/resumeRecording calls could lead to audio and
       video being out of sync or result to video being unplayable, fixed
 
-### v1.0.13 - March 16th 2013
+### v1.0.13 - March 16th 2013 (build 14)
 
 - Generic:
     - Fixed an issue with single-core retina devices (iPhone 4) and Unity 4
@@ -101,7 +139,7 @@ Everyplay SDK - Release Notes
     - Spotlight search for locating Everyplay.framework failed from
       folders with spaces, fixed
 
-### v1.0.12 - March 10th 2013
+### v1.0.12 - March 10th 2013 (build 13)
 
 - Generic:
     - GPU optimizations in SDK v1.0.11 broke 16bit MSAA recording support and
@@ -113,7 +151,7 @@ Everyplay SDK - Release Notes
     - Fixed a rare bug in video trimming that resulted to trimming
       operation not finishing in time
 
-### v1.0.11 - March 4th 2013
+### v1.0.11 - March 4th 2013 (build 12)
 
 - Generic:
     - Faster sharing: It's now possible to directly share gameplays without
@@ -153,14 +191,14 @@ Everyplay SDK - Release Notes
       - public void SetLowMemoryDevice(bool state);
       - public void ShowWithPath(string path);
 
-### v1.0.10 - February 15th 2013
+### v1.0.10 - February 15th 2013 (build 10)
 
 - Generic:
     - Fixed a rare audio encoder related crash when stopping the recording
 
     - OpenGL fix for multiple camera viewport usage
 
-### v1.0.9 - February 11th 2013
+### v1.0.9 - February 11th 2013 (build 9)
 
 - Generic:
     - New login flow for faster sharing: New users now immediately gain an Everyplay
@@ -190,7 +228,7 @@ Everyplay SDK - Release Notes
       - public bool SnapshotRenderbuffer();
       - public void SetMaxRecordingMinutesLength(int minutes);
 
-### v1.0.8 - February 4th 2013
+### v1.0.8 - February 4th 2013 (build 8)
 
 - Generic:
     - Optimized framerate consistency and timing for the recorded video
@@ -224,7 +262,7 @@ Everyplay SDK - Release Notes
 
     - EveryplayTest script now warns when trying to trigger functionality on editor
 
-### v1.0.7 - January 21st 2013
+### v1.0.7 - January 21st 2013 (build 7)
 
 - Generic:
     - Background upload support
@@ -242,7 +280,7 @@ Everyplay SDK - Release Notes
         - https://github.com/Everyplay/cocos2d-iphone/tree/master
         - https://github.com/Everyplay/cocos2d-x
 
-### v1.0.6 - January 7th 2013
+### v1.0.6 - January 7th 2013 (build 6)
 
 - Generic:
     - Two video playback related methods added, playVideoWithURL: and playVideoWithDictionary:
@@ -255,7 +293,7 @@ Everyplay SDK - Release Notes
     - Examples for using Everyplay server API and native OpenGL/audio released!
       Check out https://github.com/Everyplay/everyplay-ios-examples
 
-### v1.0.5 - December 24th 2012
+### v1.0.5 - December 24th 2012 (build 5)
 
 - Generic:
     - Good things come in small packages and this release focuses on
@@ -265,7 +303,7 @@ Everyplay SDK - Release Notes
 
     - Fixed generic tiny memory leaks that ARC didn't handle
 
-### v1.0.4 - December 18th 2012
+### v1.0.4 - December 18th 2012 (build 5)
 
 - Generic:
     - Some games triggered screen tearing to the recorded movie files
@@ -275,7 +313,7 @@ Everyplay SDK - Release Notes
 
     - Entering Everyplay view could cause a crash while updating sidebar contents, fixed
 
-### v1.0.3 - December 17th 2012
+### v1.0.3 - December 17th 2012 (build 4)
 
 - Generic:
     - iPod background music no longer goes muted when the application starts,
@@ -295,7 +333,7 @@ Everyplay SDK - Release Notes
 
     - User canceling authentication now triggers better events for internal use
 
-### v1.0.2 - December 10th 2012
+### v1.0.2 - December 10th 2012 (build 3)
 
 - Generic:
     - Fixes related to 16bit MSAA framebuffer handling
@@ -319,7 +357,7 @@ Everyplay SDK - Release Notes
       with no source code changes required. You'll only need to initialize Everyplay and
       set client id and secret as with any other engine using Objective-C API
 
-### v1.0.1 - December 4th 2012
+### v1.0.1 - December 4th 2012 (build 2)
 
 - First public release
 
@@ -361,5 +399,5 @@ Everyplay SDK - Release Notes
   - MSAA/anti-aliased rendering support broken for Unity 3.5 / 4.0,
     fixed in the next release
 
-### v1.0 - November 26th 2012
+### v1.0 - November 26th 2012 (build 1)
 - Initial release, sent to private beta developers

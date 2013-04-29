@@ -76,12 +76,6 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 
 @class EveryplayVideoPlayerViewController;
 
-@protocol EveryplayVideoPlayerDelegate
-@required
-- (void)EveryplayVideoReachedEnd:(EveryplayVideoPlayerViewController *)videoPlayerViewController;
-- (void)EveryplayVideoDoneButtonPressed:(EveryplayVideoPlayerViewController *)videoPlayerViewController;
-@end
-
 @protocol EveryplayDelegate <NSObject>
 - (void)everyplayShown;
 - (void)everyplayHidden;
@@ -94,8 +88,7 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 - (void)everyplayThumbnailReadyAtURL:(NSURL *)thumbnailUrl;
 @end
 
-@interface Everyplay : NSObject <EveryplayVideoPlayerDelegate> {
-}
+@interface Everyplay : NSObject
 
 #pragma mark - Properties
 @property (nonatomic, strong) EveryplayCapture *capture;
