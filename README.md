@@ -10,17 +10,36 @@ that recommends to upgrade the SDK. Apps downloaded from the App Store won't hav
 
 Current and previous expiration dates:
 
-- 2013-05-31 (releases from 1.0.13 to CURRENT)
+- 2013-08-31 (releases from 1.4.1 to CURRENT)
+- 2013-05-31 (releases from 1.0.13 to 1.4)
 - 2013-03-31 (releases from 1.0.10 to 1.0.12)
 - 2013-02-28 (releases from 1.0 to 1.0.9)
 
 Everyplay SDK - Release Notes
 =============================
 
+### v1.4.1 - May 8th 2013 (build 1410)
+
+- Generic:
+    - The editor mode in the new video player now launches and shows controls
+      faster when loading the replay
+
+    - Minor FaceCam related video editor bug fixes
+
+    - Fixed a regression with OpenGL graphics and use of a stencil buffer
+
+    - Fixed an issue with releasing EveryplayCapture instance and
+      re-initializing it, ie. games using native views outside the gameplay
+      and initializing OpenGL view several times
+
+    - New expiration date for the SDK build
+
+- Everyplay OpenAL:
+    - Fixed a clicking sound that could happen with certain type of audio loops
+
 ### v1.4 - April 29th 2013 (build 1400)
 
 - Generic:
-
     - New feature: FaceCam turns replays into stories. Users can now add audio
       and video commentary easily to their replays to talk about their gaming
       moments, share funny commentary and liven it up!
