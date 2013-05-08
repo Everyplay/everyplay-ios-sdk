@@ -18,7 +18,7 @@ Current and previous expiration dates:
 Everyplay SDK - Release Notes
 =============================
 
-### v1.4.1 - May 8th 2013 (build 1411)
+### v1.4.1 - May 8th 2013 (build 1412)
 
 - Generic:
     - The editor mode in the new video player now launches and shows controls
