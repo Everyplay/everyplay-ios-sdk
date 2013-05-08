@@ -18,7 +18,7 @@ Current and previous expiration dates:
 Everyplay SDK - Release Notes
 =============================
 
-### v1.4.1 - May 8th 2013 (build 1410)
+### v1.4.1 - May 8th 2013 (build 1411)
 
 - Generic:
     - The editor mode in the new video player now launches and shows controls
@@ -33,6 +33,9 @@ Everyplay SDK - Release Notes
       and initializing OpenGL view several times
 
     - New expiration date for the SDK build
+
+    - Fixed a 1.4 SDK regression of running against iOS 4 target and a rare
+      analytics crash from build 1410
 
 - Everyplay OpenAL:
     - Fixed a clicking sound that could happen with certain type of audio loops
