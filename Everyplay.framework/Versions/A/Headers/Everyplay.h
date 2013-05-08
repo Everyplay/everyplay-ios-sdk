@@ -91,7 +91,7 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 @interface Everyplay : NSObject
 
 #pragma mark - Properties
-@property (nonatomic, weak) EveryplayCapture *capture;
+@property (nonatomic, unsafe_unretained) EveryplayCapture *capture;
 @property (nonatomic, strong) UIViewController *parentViewController;
 @property (nonatomic, strong) id <EveryplayDelegate> everyplayDelegate;
 @property (nonatomic, assign) EveryplayFlowDefs flowControl;
