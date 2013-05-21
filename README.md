@@ -18,6 +18,25 @@ Current and previous expiration dates:
 Everyplay SDK - Release Notes
 =============================
 
+### v1.4.2 - May 21th 2013 (build 1420)
+
+- Generic:
+    - Fixed an issue with MSAA performance while not recording. The issue got
+      triggered in certain OpenGL pipeline integrations, such as Unity
+
+    - Fixed an issue with FaceCam mirrored image handling on iOS 5
+
+    - Some bug fixes for the new audio recording core introduced in 1.4 SDK,
+      including sample rate handling with iOS 5 on some Unity scenarios
+
+- Unity plugin:
+    - Setting a null clientId, secret or redirectURI now triggers an assert,
+      to workaround some Unity project situations where the game object
+      settings get cleared
+
+- EveryplaySoundEngine:
+    - Thread-safety fixes for streaming background music
+
 ### v1.4.1 - May 8th 2013 (build 1412)
 
 - Generic:
