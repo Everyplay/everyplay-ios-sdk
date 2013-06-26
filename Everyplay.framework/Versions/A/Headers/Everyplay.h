@@ -18,6 +18,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#import "EveryplayFaceCam.h"
 #import "EveryplayCapture.h"
 #import "EveryplayAccount.h"
 #import "EveryplayRequest.h"
@@ -84,6 +85,13 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 - (void)everyplayRecordingStarted;
 - (void)everyplayRecordingStopped;
 
+- (void)everyplayFaceCamSessionStarted;
+- (void)everyplayFaceCamSessionStopped;
+
+- (void)everyplayUploadDidStart:(NSNumber *)videoId;
+- (void)everyplayUploadDidProgress:(NSNumber *)videoId progress:(NSNumber *)progress;
+- (void)everyplayUploadDidComplete:(NSNumber *)videoId;
+
 - (void)everyplayThumbnailReadyAtFilePath:(NSString *)thumbnailFilePath;
 - (void)everyplayThumbnailReadyAtURL:(NSURL *)thumbnailUrl;
 @end
@@ -92,6 +100,7 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 
 #pragma mark - Properties
 @property (nonatomic, unsafe_unretained) EveryplayCapture *capture;
+@property (nonatomic, strong) EveryplayFaceCam *faceCam;
 @property (nonatomic, strong) UIViewController *parentViewController;
 @property (nonatomic, strong) id <EveryplayDelegate> everyplayDelegate;
 @property (nonatomic, assign) EveryplayFlowDefs flowControl;

@@ -18,7 +18,40 @@ Current and previous expiration dates:
 Everyplay SDK - Release Notes
 =============================
 
-### v1.4.2 - May 21th 2013 (build 1420)
+### v1.5 - June 26th 2013 (build 1501)
+
+- Generic:
+    - New feature: Record FaceCam commentary live while playing! FaceCam now
+      features recording of video and/or audio from the front facing camera
+      while simultaneously recording the gameplay
+
+      Users can now record and share Let's Play style replays, walkthroughs
+      and reaction videos. Depending on needs, developers can choose to not
+      show live preview video of a camera feed, position built-in preview window
+      functionality or use live preview video feed as a texture within the game
+
+      For more info, please read
+      https://developers.everyplay.com/doc/Everyplay-Live-FaceCam-integration-to-iOS-game
+
+    - New delegates for FaceCam session and video upload states, so now you can
+      thank your players after sharing the video
+
+    - iOS 7 beta workarounds for changed behaviour or regressions
+
+- Unity plugin:
+    - Live FaceCam support with new helper methods. For more info, please read
+      https://developers.everyplay.com/doc/Everyplay-Live-FaceCam-integration-to-Unity3d-game
+
+    - Merged prefab and helper script for HUD-less recording that was
+      previously distributed as a separate package
+
+    - New delegates for FaceCam session and video upload states
+
+    - Added two new methods:
+      - public bool IsRecordingSupported();
+      - public bool IsSingleCoreDevice();
+
+### v1.4.2 - May 21st 2013 (build 1420)
 
 - Generic:
     - Fixed an issue with MSAA performance while not recording. The issue got
