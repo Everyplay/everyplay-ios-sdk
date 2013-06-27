@@ -18,6 +18,12 @@ Current and previous expiration dates:
 Everyplay SDK - Release Notes
 =============================
 
+### v1.5.1 - June 27th 2013 (build 1510)
+
+- Generic:
+    - Fixed a few OpenGL regressions from 1.5 release, including the
+      dreaded OpenGL 0x502 error on certain Unity apps while launching
+
 ### v1.5 - June 26th 2013 (build 1501)
 
 - Generic:
