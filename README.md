@@ -10,13 +10,57 @@ that recommends to upgrade the SDK. Apps downloaded from the App Store won't hav
 
 Current and previous expiration dates:
 
-- 2013-08-31 (releases from 1.4.1 to CURRENT)
+- 2013-11-25 (releases from 1.6 to CURRENT)
+- 2013-08-31 (releases from 1.4.1 to 1.5.1)
 - 2013-05-31 (releases from 1.0.13 to 1.4)
 - 2013-03-31 (releases from 1.0.10 to 1.0.12)
 - 2013-02-28 (releases from 1.0 to 1.0.9)
 
 Everyplay SDK - Release Notes
 =============================
+
+### v1.6 - August 14th 2013 (build 1600)
+
+- Generic:
+    - New feature: Everyplay sharing can now be triggered as modal dialogue
+      while the game is visible on the background. Players can now immediately
+      share replay without going through the video player flow
+
+      For suitable scenarios, call [[Everyplay sharedInstance] showEveryplaySharingModal];
+
+    - All around generic recording optimizations and fixes, including
+      improved iPad 3 video framerate, video tearing fixes for certain
+      random devices, pause/resume handling, fixes for rare avsync issues
+      and video framerate on single-core devices
+
+    - Optimized audio recording performance for some extreme cases
+
+    - Fixes to audio handling bugs that may have resulted to a muted
+      audio in certain situations
+
+    - AVFoundation AVAudioPlayer support now out of private beta
+
+    - Thumbnail performance and memory optimizations, orientation
+      handling and alpha channel fixes
+
+    - Improved video resolution for Retina iPad in some cases
+
+    - CocosDenshion background music support now enabled for older
+      single-core devices
+
+    - New built-in A/B testing functionality for certain UX functionality
+
+    - Few potential UI crashes fixed
+
+    - Improved iOS7 support
+
+- UE3:
+    - Performance optimizations for Unreal Engine 3
+
+- Unity plugin:
+    - Added support for Unity 4.2
+
+    - New method for bringing up modal share dialog, public void ShowSharingModal();
 
 ### v1.5.1 - June 27th 2013 (build 1510)
 

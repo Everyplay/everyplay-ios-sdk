@@ -44,6 +44,13 @@
 
 /* Optimize for low memory devices, disabled by default. */
 @property (nonatomic, assign) BOOL lowMemoryDevice;
+
+/*
+ * If the recorded video frames show jerky behavior,
+ * enable this to workaround.
+ */
+@property (nonatomic, assign) BOOL workaroundFrameJerking;
+
 /*
  * Disable recording support for single-core CPU devices
  *

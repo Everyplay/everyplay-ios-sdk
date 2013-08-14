@@ -36,6 +36,7 @@ extern NSString * const EveryplayAccountDidFailToGetAccessToken;
 
 #pragma mark Accessors
 - (NSDictionary *) user;
+- (NSString *) accessToken;
 
 #pragma mark Methods
 - (void) loadUserWithCompletionHandler:(EveryplayAccountUserLoadingHandler)aCompletionHandler;

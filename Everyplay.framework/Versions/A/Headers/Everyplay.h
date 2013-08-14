@@ -58,6 +58,18 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 
 @interface EveryplayFeatures : NSObject
 /*
+ * Is running on iOS 5 or later?
+ * Useful for disabling functionality on older devices.
+ */
++ (BOOL) isSupported;
+
+/*
+ * Returns the number of CPU cores on device.
+ * Useful for disabling functionality on older devices.
+ */
++ (NSUInteger) numCores;
+
+/*
  * To disable Everyplay OpenAL implementation, override this class
  * method to return NO.
  */
@@ -69,6 +81,13 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
  * override this class method to return NO.
  */
 + (BOOL) supportsCocosDenshion;
+
+/*
+ * AVFoundation AVAudioPlayer support currently lacks hardware
+ * decoder support. To disable recording support for background music,
+ * override this class method to return NO.
+ */
++ (BOOL) supportsAVFoundation;
 @end
 
 #pragma mark -
@@ -94,6 +113,8 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 
 - (void)everyplayThumbnailReadyAtFilePath:(NSString *)thumbnailFilePath;
 - (void)everyplayThumbnailReadyAtURL:(NSURL *)thumbnailUrl;
+
+- (void)everyplayThumbnailReadyAtTextureId:(NSNumber *)textureId portraitMode:(NSNumber *)portrait;
 @end
 
 @interface Everyplay : NSObject
@@ -117,6 +138,7 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 #pragma mark - Public Methods
 - (void)showEveryplay;
 - (void)showEveryplayWithPath:(NSString *)path;
+- (void)showEveryplaySharingModal;
 - (void)hideEveryplay;
 - (void)playLastRecording;
 
