@@ -19,6 +19,26 @@ Current and previous expiration dates:
 Everyplay SDK - Release Notes
 =============================
 
+### v1.6.1 - August 22nd 2013 (build 1610)
+
+- Generic:
+    - Changed some code that could have led to a false positive
+      result from App Store review process, claiming non-public
+      API usage in 1.6 SDK
+
+    - Improved closing the new modal share dialog on iOS 5
+
+    - Fixes to audio handling bugs that may have resulted to a muted
+      audio in certain situations
+
+    - A/B testing framework improvements while the app is in
+      development mode
+
+    - Fix to blurry Everyplay logo on iPad
+
+- EveryplaySoundEngine:
+    - Fixed clicking sound issues in OpenAL
+
 ### v1.6 - August 14th 2013 (build 1600)
 
 - Generic:
