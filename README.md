@@ -19,6 +19,36 @@ Current and previous expiration dates:
 Everyplay SDK - Release Notes
 =============================
 
+### v1.6.2 - August 30th 2013 (build 1620)
+
+- Generic:
+    - New features based on improved thumbnail code in 1.6 SDK series
+
+    - You can now control when the thumbnail(s) are taken by calling
+      [[[Everyplay sharedInstance] capture] takeThumbnail]; as many
+      times you like and use them within your game UI or provide means
+      for sharing to social networks
+
+    - You can now control the resolution of the file based thumbnail
+      through thumbnailWidth property in EveryplayCapture
+
+    - Instead of loading a thumbnail from a file based resource, you can
+      now pass in your own texture ID and render the thumbnail there directly,
+      by using thumbnailTargetTexture* properties in EveryplayCapture
+
+    - New delegate for texture ID based thumbnailing
+
+    - Fixed a regression in 1.6 SDK series that could have resulted to a brief
+      black screen while the initialization is in progress
+
+- Unity plugin:
+    - Support for new thumbnail features
+
+    - New EveryplayAnimatedThumbnail helper
+
+- EveryplaySoundEngine:
+    - Now supports querying AL_SEC_OFFSET with OpenAL
+
 ### v1.6.1 - August 22nd 2013 (build 1610)
 
 - Generic:

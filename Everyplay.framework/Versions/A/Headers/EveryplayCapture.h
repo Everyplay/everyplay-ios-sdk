@@ -65,6 +65,14 @@
 @property (nonatomic, readonly) BOOL isRecording;
 @property (nonatomic, readonly) BOOL isPaused;
 
+// Filebased thumbnail target
+@property (nonatomic, assign) int thumbnailWidth;
+
+// Thumbnail target texture
+@property (nonatomic, assign) int thumbnailTargetTextureId;
+@property (nonatomic, assign) int thumbnailTargetTextureWidth;
+@property (nonatomic, assign) int thumbnailTargetTextureHeight;
+
 #pragma mark - screen (OpenGL) capturing
 - (id)initWithView:(UIView *)glview eaglContext:(EAGLContext *)context layer:(CAEAGLLayer *)layer;
 
@@ -90,6 +98,8 @@
 
 - (void)pauseRecording;
 - (void)resumeRecording;
+
+- (void)takeThumbnail;
 
 - (void)autoRecordForSeconds:(NSUInteger)seconds withDelay:(NSUInteger)delay;
 
