@@ -19,6 +19,27 @@ Current and previous expiration dates:
 Everyplay SDK - Release Notes
 =============================
 
+### v1.6.3 - September 23rd 2013 (build 1630)
+
+- Generic:
+    - More tweaks against final iOS 7 GM, now built against Xcode 5 GM with
+      initial 64bit support
+
+    - Fixed status bar appearance on iOS 7
+
+    - AVAudioPlayer now supports audioPlayerDidFinishPlaying:successfully: delegate
+
+    - Fixed an issue with GameCenter matchmaking API
+
+    - Fixed potential memory leaks
+
+    - Fixed a regression with iPod background music support
+
+    - A/B testing framework improvements
+
+- Cocos2d:
+    - Fixed an issue with OpenGL viewport handling
+
 ### v1.6.2 - August 30th 2013 (build 1620)
 
 - Generic:
