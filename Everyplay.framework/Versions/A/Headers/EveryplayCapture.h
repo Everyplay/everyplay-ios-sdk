@@ -52,6 +52,14 @@
 @property (nonatomic, assign) BOOL workaroundFrameJerking;
 
 /*
+ * By default, Everyplay tries to workaround certain older
+ * view and orientation handling issues. If you experience
+ * problems (such as recorded view showing in wrong orientation),
+ * disable this workaround.
+ */
+@property (nonatomic, assign) BOOL workaroundLegacyOrientations;
+
+/*
  * Disable recording support for single-core CPU devices
  *
  * Depending on a game and the device, recording a gameplay

@@ -19,6 +19,47 @@ Current and previous expiration dates:
 Everyplay SDK - Release Notes
 =============================
 
+### v1.7 - November 4th 2013 (build 1700)
+
+- Generic:
+    - Main focus on improving thread-safety and stability, iOS 7 compatibility,
+      ARC memory management behaviour and fixing known, hard to reproduce issues
+      that we've seen from developer submitted crash logs
+
+    - Everyplay.bundle graphics have been updated towards more iOS 7
+      look and feel
+
+    - Everyplay sidebar population and handling has been rewritten
+      with better reliability and showing icon graphics
+
+    - Internal changes for upcoming landscape view support on iPhone
+
+    - Fixes to keyboard layout behaviour in some views and iOS versions
+
+    - Video player view now shows more info about the video
+
+    - Improved video editor trimming behaviour and touch area size
+
+    - Improved network reachability logic
+
+    - AVAudioPlayer support improvements
+
+    - Fixed certain iOS 7 related orientation handling issues
+
+    - Fixed a potential crash situation with everyplayUpload* delegate
+      and passing NSNumber values
+
+    - Fixed a rare crash from saving gameplay metadata
+
+    - Fixed a rare crash from internal analytics code sending events
+
+    - Fixed a rare crash with everyplayThumbnailReadyAtFilePath: delegate
+      and Unity3d
+
+    - Fixed a rare crash from CoreAudio and CFRelease usage
+
+    - Added workaroundLegacyOrientations property to EveryplayCapture
+
 ### v1.6.3 - September 23rd 2013 (build 1630)
 
 - Generic:
