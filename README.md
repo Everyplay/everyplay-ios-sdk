@@ -10,7 +10,8 @@ that recommends to upgrade the SDK. Apps downloaded from the App Store won't hav
 
 Current and previous expiration dates:
 
-- 2013-11-25 (releases from 1.6 to CURRENT)
+- 2014-02-28 (releases from 1.7.1 to CURRENT)
+- 2013-11-25 (releases from 1.6 to 1.7)
 - 2013-08-31 (releases from 1.4.1 to 1.5.1)
 - 2013-05-31 (releases from 1.0.13 to 1.4)
 - 2013-03-31 (releases from 1.0.10 to 1.0.12)
@@ -18,6 +19,14 @@ Current and previous expiration dates:
 
 Everyplay SDK - Release Notes
 =============================
+
+### v1.7.1 - November 12th 2013 (build 1710)
+
+- Generic:
+    - Video editor on iOS 7 now properly checks for user permissions before
+      adding buttons for doing audio and/or video FaceCam commentary
+
+    - Video editor now allows to trim shorter videos from longer recordings
 
 ### v1.7 - November 4th 2013 (build 1700)
 
