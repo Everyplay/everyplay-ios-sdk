@@ -28,6 +28,9 @@ Everyplay SDK - Release Notes
 
     - Video editor now allows to trim shorter videos from longer recordings
 
+- Unity plugin:
+    - Added support for Unity 4.3
+
 ### v1.7 - November 4th 2013 (build 1700)
 
 - Generic:
