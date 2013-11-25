@@ -20,6 +20,28 @@ Current and previous expiration dates:
 Everyplay SDK - Release Notes
 =============================
 
+### v1.7.2 - November 25th 2013 (build 1720)
+
+- Generic:
+    - 64bit support: Fixed broken video editor UI and other
+      internal compatibility fixes
+
+    - Improved notification handling on certain cases that involves
+      pause/resume of recording or continuing recording, giving back
+      more control to developer
+
+    - Fixed a bug from handling multiple AVAudioPlayer instances
+      with separate delegate handlers
+
+    - Initial AVAudioPlayer level metering support
+
+- Cocos2d:
+    - Added support for Cocos2d-x 3.0 alpha
+
+- Unity plugin:
+    - Fixed an issue with MSAA support being broken for
+      Unity 4.1 and later releases
+
 ### v1.7.1 - November 12th 2013 (build 1710)
 
 - Generic:
