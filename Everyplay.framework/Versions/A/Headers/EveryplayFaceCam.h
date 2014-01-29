@@ -31,6 +31,7 @@ typedef enum {
 @property (nonatomic, readonly) BOOL isAudioRecordingSupported;
 @property (nonatomic, readonly) BOOL isHeadphonesPluggedIn;
 @property (nonatomic, readonly) BOOL isSessionRunning;
+@property (nonatomic, readonly) BOOL isRecordingPermissionGranted;
 
 // Audio levels
 @property (nonatomic, readonly) float audioPeakLevel;
@@ -56,7 +57,8 @@ typedef enum {
 @property (nonatomic, assign) int targetTextureWidth;
 @property (nonatomic, assign) int targetTextureHeight;
 
-// Session handling methods
+- (void) requestRecordingPermission;
+
 - (void) startSession;
 - (void) stopSession;
 

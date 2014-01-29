@@ -20,6 +20,45 @@ Current and previous expiration dates:
 Everyplay SDK - Release Notes
 =============================
 
+### v1.7.3 - January 29th 2014 (build 1730)
+
+- Generic:
+    - Breaking API change for Live FaceCam support: Due to new iOS7
+      user permission additions, it's now required to ask for a grant
+      before starting sessions through [[Everyplay sharedInstance] faceCam]
+
+      If the permission hasn't been yet asked, calling
+      [[[Everyplay sharedInstance] faceCam] requestRecordingPermission];
+      will bring up standard iOS permission dialog, following calls
+      give the state the user previously answered
+
+      You can later check the granted state either by using the delegate handler
+      or asking from the [[Everyplay sharedInstance] faceCam].isRecordingPermissionGranted
+      property
+
+    - New delegate for Live FaceCam permission grant:
+      (void)everyplayFaceCamRecordingPermission:(NSNumber *)granted
+
+    - Following the changes in 1.7.2, more improvements and bugfixes for
+      developer triggered pause/resume handler while entering background
+      and coming back
+
+    - Improved redirectURI validation
+
+    - UI localization support, starting with Japanese and Korean
+
+- Unity plugin:
+    - Compatibility fixes against Unity 4.3.3 WWW class
+
+    - New methods for asking Live FaceCam permission grant from the
+      user before allowed to call FaceCamStartSession:
+      - public bool FaceCamIsRecordingPermissionGranted();
+      - public void FaceCamRequestRecordingPermission();
+
+    - New delegate for Live FaceCam permission grant, FaceCamRecordingPermission
+
+    - Improved test scripts in Everyplay.prefab with new features
+
 ### v1.7.2 - November 25th 2013 (build 1720)
 
 - Generic:

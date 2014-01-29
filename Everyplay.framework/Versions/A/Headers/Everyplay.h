@@ -105,6 +105,7 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 - (void)everyplayRecordingStopped;
 
 - (void)everyplayFaceCamSessionStarted;
+- (void)everyplayFaceCamRecordingPermission:(NSNumber *)granted;
 - (void)everyplayFaceCamSessionStopped;
 
 - (void)everyplayUploadDidStart:(NSNumber *)videoId;
