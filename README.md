@@ -23,7 +23,11 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
-### v1.7.4 - February 11th 2014 (build 1740)
+### v1.7.4 - February 11th 2014 (build 1741)
+
+- Build 1741: Fixed localization related bundle lookup error
+  in some cases (NSInvalidArgumentException error with
+  [NSPlaceholderString initWithFormat:locale:arguments:])
 
 - Initial spatial audio support with OpenAL
 
