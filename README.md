@@ -3,6 +3,8 @@ for your game. You can get these along with the latest integration instructions 
 
 You can always download the latest SDK upgrades directly from https://github.com/everyplay/everyplay-ios-sdk
 
+Looking for Android version? See https://github.com/everyplay/everyplay-android-sdk
+
 Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 
 For now, each SDK release has an expiration date. After expiring, there's a warning dialog on launch
@@ -10,15 +12,37 @@ that recommends to upgrade the SDK. Apps downloaded from the App Store won't hav
 
 Current and previous expiration dates:
 
-- 2014-02-28 (releases from 1.7.1 to CURRENT)
+- 2014-05-31 (releases from 1.7.4 to CURRENT)
+- 2014-02-28 (releases from 1.7.1 to 1.7.3)
 - 2013-11-25 (releases from 1.6 to 1.7)
 - 2013-08-31 (releases from 1.4.1 to 1.5.1)
 - 2013-05-31 (releases from 1.0.13 to 1.4)
 - 2013-03-31 (releases from 1.0.10 to 1.0.12)
 - 2013-02-28 (releases from 1.0 to 1.0.9)
 
-Everyplay SDK - Release Notes
-=============================
+Everyplay SDK/iOS - Release Notes
+=================================
+
+### v1.7.4 - February 11th 2014 (build 1740)
+
+- Initial spatial audio support with OpenAL
+
+- Fixed rare video merging issues and video player UI behaviour
+
+- New internal notification manager functionality that improves
+  handling of certain scenarios for better Live FaceCam support
+
+- New EveryplayFaceCam class option to set Live FaceCam preview
+  box border color, defaults to white
+
+- Fixed certain rare audio issues on developer triggered pause/resume
+  handling while entering background and coming back
+
+- Fixed OpenAL audio resource leak that happens in some scenarios,
+  potentially leading to no sound
+
+- Added EveryplayFeatures.disableOpenALMessages toggle to turn off
+  logging for non-implemented OpenAL methods or parameters used
 
 ### v1.7.3 - January 29th 2014 (build 1730)
 

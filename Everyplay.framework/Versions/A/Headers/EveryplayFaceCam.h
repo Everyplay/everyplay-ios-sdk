@@ -24,6 +24,10 @@ typedef enum {
     EVERYPLAY_FACECAM_PREVIEW_ORIGIN_BOTTOM_RIGHT
 } EveryplayFaceCamPreviewOrigin;
 
+typedef struct {
+    float r, g, b, a;
+} EveryplayFaceCamColor;
+
 @interface EveryplayFaceCam : NSObject
 
 // Device support and states
@@ -43,6 +47,7 @@ typedef enum {
 
 // FaceCam preview box properties
 @property (nonatomic, assign) EveryplayFaceCamPreviewOrigin previewOrigin;
+@property (nonatomic, assign) EveryplayFaceCamColor previewBorderColor;
 
 @property (nonatomic, assign) BOOL previewVisible;
 @property (nonatomic, assign) BOOL previewScaleRetina;

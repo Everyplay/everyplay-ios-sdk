@@ -76,6 +76,12 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 + (BOOL) supportsOpenAL;
 
 /*
+ * To disable Everyplay OpenAL "missing implementation" messages, override
+ * this class method to return YES.
+ */
++ (BOOL) disableOpenALMessages;
+
+/*
  * CocosDenshion background music support currently lacks hardware
  * decoder support. To disable recording support for background music,
  * override this class method to return NO.
