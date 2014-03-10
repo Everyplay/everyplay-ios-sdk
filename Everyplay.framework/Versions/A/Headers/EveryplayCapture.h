@@ -1,5 +1,5 @@
 /*
- * Copyright 2012 Applifier
+ * Copyright 2012-2014 Applifier
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,7 +27,13 @@
 #import <AVFoundation/AVFoundation.h>
 #import <QuartzCore/QuartzCore.h>
 
+#ifndef EVERYPLAY_CAPTURE_API_VERSION
+#define EVERYPLAY_CAPTURE_API_VERSION 2
+#endif
+
 @interface EveryplayCapture : NSObject<AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate>;
+
+/* Call as [[Everyplay sharedInstance] capture].property */
 
 /* Set target framerate for the video, defaults to 30fps. (Valid values: 30, 20, 15) */
 @property (nonatomic, assign) NSUInteger targetFPS;
@@ -73,15 +79,21 @@
 @property (nonatomic, readonly) BOOL isRecording;
 @property (nonatomic, readonly) BOOL isPaused;
 
-// Filebased thumbnail target
+/* File based thumbnail target */
 @property (nonatomic, assign) int thumbnailWidth;
 
-// Thumbnail target texture
+/* Thumbnail target texture */
 @property (nonatomic, assign) int thumbnailTargetTextureId;
 @property (nonatomic, assign) int thumbnailTargetTextureWidth;
 @property (nonatomic, assign) int thumbnailTargetTextureHeight;
 
 #pragma mark - screen (OpenGL) capturing
+
+/*
+ * For advanced use cases only. You shouldn't need to call these,
+ * but focus on setting properties and calling helper methods through
+ * [[Everyplay sharedInstance] capture]
+ */
 - (id)initWithView:(UIView *)glview eaglContext:(EAGLContext *)context layer:(CAEAGLLayer *)layer;
 
 - (void)createFramebuffer;
@@ -93,19 +105,22 @@
 
 - (GLuint)msaaFramebuffer:(GLuint)msaaFramebufferRef;
 
-- (BOOL)snapshotRenderbuffer;
-
 - (BOOL)beforePresentRenderbuffer:(GLuint)framebufferRef;
 
 - (BOOL)afterPresentRenderbuffer;
 - (BOOL)afterPresentRenderbuffer:(GLuint)msaaFramebufferRef;
 
 #pragma mark - Helpers
+
+/* Call as [[[Everyplay sharedInstance] capture] <helper method>]; */
+
 - (void)startRecording;
 - (void)stopRecording;
 
 - (void)pauseRecording;
 - (void)resumeRecording;
+
+- (BOOL)snapshotRenderbuffer;
 
 - (void)takeThumbnail;
 

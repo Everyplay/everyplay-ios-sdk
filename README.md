@@ -23,30 +23,67 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v1.7.5 - March 10th 2014 (build 1750)
+
+- Generic:
+    - Custom engines: OpenGL pipeline changes for recording support
+      are now entirely optional (for advanced use cases), following
+      the behaviour from the Android version
+
+    - OpenGL performance and state handling improvements, including
+      OpenGL ES3 support
+
+    - Improved support for GLKit and SpriteKit, new upgraded
+      examples available at:
+
+      https://github.com/Everyplay/everyplay-ios-examples
+
+    - UI localization support for Simplified Chinese
+
+    - Full OpenAL spatial audio support
+
+    - OpenAL/CocosDenshion: Muting sound effects volume would also
+      mute background music, fixed
+
+    - Fixed a merging issue of videos with no audio track
+
+    - 64bit support: Apps downloaded from the App Store didn't
+      remove the sandbox status, fixed
+
+    - Fixed a regression that prevented apps from launching on iOS 4.x,
+      giving error related to "Symbol not found: _objc_storeWeak"
+
+- UE3:
+    - Potential fix for audio processing on certain older generation devices
+
+- Unity plugin:
+    - Now supports changing the Live FaceCam preview border color
+
 ### v1.7.4 - February 11th 2014 (build 1741)
 
-- Build 1741: Fixed localization related bundle lookup error
-  in some cases (NSInvalidArgumentException error with
-  [NSPlaceholderString initWithFormat:locale:arguments:])
+- Generic:
+    - Build 1741: Fixed localization related bundle lookup error
+      in some cases (NSInvalidArgumentException error with
+      [NSPlaceholderString initWithFormat:locale:arguments:])
 
-- Initial spatial audio support with OpenAL
+    - Initial spatial audio support with OpenAL
 
-- Fixed rare video merging issues and video player UI behaviour
+    - Fixed rare video merging issues and video player UI behaviour
 
-- New internal notification manager functionality that improves
-  handling of certain scenarios for better Live FaceCam support
+    - New internal notification manager functionality that improves
+      handling of certain scenarios for better Live FaceCam support
 
-- New EveryplayFaceCam class option to set Live FaceCam preview
-  box border color, defaults to white
+    - New EveryplayFaceCam class option to set Live FaceCam preview
+      box border color, defaults to white
 
-- Fixed certain rare audio issues on developer triggered pause/resume
-  handling while entering background and coming back
+    - Fixed certain rare audio issues on developer triggered pause/resume
+      handling while entering background and coming back
 
-- Fixed OpenAL audio resource leak that happens in some scenarios,
-  potentially leading to no sound
+    - Fixed OpenAL audio resource leak that happens in some scenarios,
+      potentially leading to no sound
 
-- Added EveryplayFeatures.disableOpenALMessages toggle to turn off
-  logging for non-implemented OpenAL methods or parameters used
+    - Added EveryplayFeatures.disableOpenALMessages toggle to turn off
+      logging for non-implemented OpenAL methods or parameters used
 
 ### v1.7.3 - January 29th 2014 (build 1730)
 

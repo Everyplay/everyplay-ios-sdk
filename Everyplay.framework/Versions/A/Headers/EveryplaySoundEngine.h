@@ -22,6 +22,8 @@
 @interface EveryplaySoundEngine : NSObject <AVAudioSessionDelegate>;
 
 @property (readwrite) float backgroundMusicVolume;
+@property (readwrite) float effectsVolume;
+@property (readwrite) float masterVolume;
 
 + (EveryplaySoundEngine *)sharedInstance;
 

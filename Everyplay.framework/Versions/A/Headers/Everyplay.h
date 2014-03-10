@@ -1,5 +1,5 @@
 /*
- * Copyright 2012 Applifier
+ * Copyright 2012-2014 Applifier
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,9 +25,9 @@
 #import "EveryplaySoundEngine.h"
 
 #pragma mark - Developer metadata
-static NSString * const kEveryplayMetadataScoreInteger = @"score";
-static NSString * const kEveryplayMetadataLevelInteger = @"level";
-static NSString * const kEveryplayMetadataLevelNameString = @"level_name";
+extern NSString * const kEveryplayMetadataScoreInteger;    // @"score"
+extern NSString * const kEveryplayMetadataLevelInteger;    // @"level"
+extern NSString * const kEveryplayMetadataLevelNameString; // @"level_name"
 
 #pragma mark - View controller flow settings
 
@@ -37,11 +37,11 @@ typedef enum  {
 } EveryplayFlowDefs;
 
 #pragma mark - Error codes
-static NSString * const kEveryplayErrorDomain = @"com.everyplay";
+extern NSString * const kEveryplayErrorDomain;       // @"com.everyplay"
 
-static const int kEveryplayLoginCanceledError = 100;
-static const int kEveryplayMovieExportCanceledError = 101;
-static const int kEveryplayFileUploadError = 102;
+extern const int kEveryplayLoginCanceledError;       // 100
+extern const int kEveryplayMovieExportCanceledError; // 101
+extern const int kEveryplayFileUploadError;          // 102
 
 #pragma mark - Notifications
 
@@ -172,7 +172,6 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 + (BOOL)handleRedirectURL:(NSURL *)URL;
 
 @end
-
 
 #pragma mark - Macros
 
