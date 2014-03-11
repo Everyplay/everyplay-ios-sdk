@@ -23,7 +23,7 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
-### v1.7.5 - March 10th 2014 (build 1750)
+### v1.7.5 - March 11th 2014 (build 1751)
 
 - Generic:
     - Custom engines: OpenGL pipeline changes for recording support
