@@ -23,6 +23,33 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v1.7.6 - April 7th 2014 (build 1760)
+
+- Generic:
+    - Fixed a regression from 1.7.5 SDK with using disableSingleCoreDevices
+      property, in some non-Unity cases it could have caused screen rendering
+      to halt entirely
+
+    - Fixed Twitter sharing for iOS 7.1 devices, a workaround required for
+      previous releases was now causing a crash
+
+    - Fixed some rare OpenGL graphics state issues
+
+    - Fixed potential ES3 linking errors for some engine build environments
+
+    - Improved SpriteKit support
+
+    - Generic Live FaceCam stability and performance improvements
+
+    - Fixed Live Facecam from showing preview border in audio only mode,
+      previously it was required to disable preview box manually
+
+    - Improved startRecording internal behaviour so there's less need for handling
+      everyplayReadyForRecording: delegate in some early initialization scenarios
+
+- Unity plugin:
+    - New graphics integration support for iOS
+
 ### v1.7.5 - March 11th 2014 (build 1751)
 
 - Generic:
