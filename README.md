@@ -12,7 +12,8 @@ that recommends to upgrade the SDK. Apps downloaded from the App Store won't hav
 
 Current and previous expiration dates:
 
-- 2014-05-31 (releases from 1.7.4 to CURRENT)
+- 2014-09-14 (releases from 1.8 to CURRENT)
+- 2014-05-31 (releases from 1.7.4 to 1.7.6)
 - 2014-02-28 (releases from 1.7.1 to 1.7.3)
 - 2013-11-25 (releases from 1.6 to 1.7)
 - 2013-08-31 (releases from 1.4.1 to 1.5.1)
@@ -22,6 +23,71 @@ Current and previous expiration dates:
 
 Everyplay SDK/iOS - Release Notes
 =================================
+
+### v1.8.0 - May 14th 2014 (build 1801)
+
+- Generic:
+    - Everyplay now uses Accounts.framework and Facebook SDK for improved,
+      seamless Twitter and Facebook login support. If none are linked into
+      the project, the old login conventions apply
+
+    - The new improved Facebook login shares via Everyplay Facebook application,
+      not through your existing Facebook application credentials. For immediate
+      use, you might need to send your iOS bundle information or Android key
+      hash to get started, please contact support@everyplay.com. We're currently
+      working on making this step automated without extra work required on
+      developers behalf
+
+    - All around stability and internal handling changes to the
+      video recording core
+
+    - Further GPU optimizations against the new graphics integration, especially
+      with older devices like iPhone 4S, iPad 2 and iPad 3
+
+    - Fixed a regression on using the latest Unity package and the new
+      graphics integration that resulted to broken graphics in certain
+      non-target native resolution use cases (Screen.SetResolution)
+
+    - Fixed a rare exception related to:
+      '[AVAssetWriterInput initWithMediaType:outputSettings:sourceFormatHint:]
+      AVVideoSettings dictionary must specify a positive width'
+
+    - Improved video orientation detection
+
+    - Fixed EveryplayCapture setLowMemoryDevice property behaviour in
+      some rare cases
+
+    - Improved Cocosd2d / SpriteKit support
+
+    - Everyplay.framework is now built without use of symlinks
+
+- Unity plugin:
+    - Improved Facebook integration, this requires the use of "Facebook for Unity" asset
+      available from the Asset Store
+
+    - Lots of internal plugin changes and file location changes for better Unity integration,
+      the migration should be seamless without removing previous assets
+
+    - New prefables integration. Instead of dragging a prefab to your first scene
+      you may use the Edit / Everyplay Settings menu to enable Everyplay and to
+      set your game credentials. This also allows you to temporarily disable
+      Everyplay without removing the package
+
+    - Double check that clientId, secret and redirectURI settings have merged into
+      the new Edit / Everyplay Settings menu after upgrading
+
+    - Calling Everyplay through the SharedInstance is now deprecated. You may still
+      use the old way, but the recommended way is to call Everyplay.methodName
+
+    - Added checkboxes to new Everyplay settings menu for enabling Everyplay per
+      platform (iOS/Android)
+
+    - iOS Everyplay.framework and bundle are now directly embedded into the package
+      and used as the only option
+
+    - Old test button functionality in Everyplay.prefab has been moved to
+      Plugins/Everyplay/Helpers/EveryplayTest.prefab. A new simplified one can
+      be enabled through Edit / Everyplay Settings menu
 
 ### v1.7.6 - April 7th 2014 (build 1760)
 
