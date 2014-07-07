@@ -5,7 +5,7 @@ You can always download the latest SDK upgrades directly from https://github.com
 
 Looking for Android version? See https://github.com/everyplay/everyplay-android-sdk
 
-Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
+Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html) with restrictions. Please see Everyplay Terms of Service at https://everyplay.com/developer-terms-of-service for more information.
 
 For now, each SDK release has an expiration date. After expiring, there's a warning dialog on launch
 that recommends to upgrade the SDK. Apps downloaded from the App Store won't have this behaviour.
