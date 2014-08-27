@@ -4,6 +4,8 @@ for your game. You can get these along with the latest integration instructions 
 You can always download the latest SDK upgrades directly from https://github.com/everyplay/everyplay-ios-sdk
 
 Looking for Android version? See https://github.com/everyplay/everyplay-android-sdk
+Looking for Unity plugin? See https://github.com/everyplay/everyplay-unity-sdk
+Looking for Adobe AIR version? See https://github.com/everyplay/everyplay-air-sdk
 
 Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html) with restrictions. Please see Everyplay Terms of Service at https://everyplay.com/developer-terms-of-service for more information.
 
@@ -12,7 +14,8 @@ that recommends to upgrade the SDK. Apps downloaded from the App Store won't hav
 
 Current and previous expiration dates:
 
-- 2014-09-14 (releases from 1.8 to CURRENT)
+- 2015-01-31 (releases from 1.8.1 to CURRENT)
+- 2014-09-14 (releases from 1.8 to 1.8)
 - 2014-05-31 (releases from 1.7.4 to 1.7.6)
 - 2014-02-28 (releases from 1.7.1 to 1.7.3)
 - 2013-11-25 (releases from 1.6 to 1.7)
@@ -23,6 +26,45 @@ Current and previous expiration dates:
 
 Everyplay SDK/iOS - Release Notes
 =================================
+
+### v1.8.1 - Aug 27th 2014 (build 1810)
+
+- Generic:
+    - Major audio internals rework for future features, optimized for iOS 7
+
+      As a result, there's less audio interruptions and potential issues that
+      could cause losing audio output, recorded audio to be silent or go out
+      of sync, mediaserverd crashing and causing wide load of generic issues
+
+    - Now supports AudioQueue recording against linear PCM
+      and compressed formats (such as AAC)
+
+    - The audio core is now more sample rate agnostic, but 44.1 kHz is still
+      considered the optimal one
+
+    - OpenAL: Improved source/buffer instance refcounting and thread-safety
+
+    - OpenAL: Loading audio samples with alBufferData now prefers the
+      original sample rate specified and using less memory
+
+    - OpenAL: Loading certain audio samples caused audio clicks, fixed
+
+    - AVFoundation: AVAudioPlayer now supports duration and numberOfChannels
+      properties
+
+    - AVFoundation: Improved audio streaming playback
+
+    - Fixed rare race condition in graphics recording that could have
+      caused dropped video frames or not adding new frames to video
+
+    - Video editor now adds FaceCam recording UI buttons only after
+      iOS user permission check
+
+    - Now comes with Adobe AIR support:
+
+      https://github.com/Everyplay/everyplay-air-sdk
+
+    - Unity plugin relocated to https://github.com/everyplay/everyplay-unity-sdk
 
 ### v1.8.0 - May 14th 2014 (build 1801)
 
