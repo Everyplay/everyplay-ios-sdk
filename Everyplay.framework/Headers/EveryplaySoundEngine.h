@@ -19,7 +19,8 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface EveryplaySoundEngine : NSObject <AVAudioSessionDelegate>;
+NS_CLASS_AVAILABLE(10_7, 4_0)
+@interface EveryplaySoundEngine : NSObject
 
 @property (readwrite) float backgroundMusicVolume;
 @property (readwrite) float effectsVolume;

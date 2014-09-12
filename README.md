@@ -27,6 +27,18 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v1.8.2 - Sep 12th 2014 (build 1820)
+
+- Generic:
+    - iOS 8 view initialization fixes
+
+    - CPU optimizations for games with hard 60fps requirement
+
+    - AVFoundation: AVAudioPlayer now supports initWithData: method
+
+    - AVFoundation/OpenAL: Backgrounding application during initial splash screen
+      could break audio state handling, fixed
+
 ### v1.8.1 - Aug 27th 2014 (build 1810)
 
 - Generic:
