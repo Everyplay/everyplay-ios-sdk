@@ -51,7 +51,7 @@ Everyplay SDK/iOS - Release Notes
       process, re-create OpenGL buffers. In some cases, calling EAGLContext
       renderbufferStorage:fromDrawable fails and may result to frozen graphics
 
-      This is behaviour is mostly seen on some custom engines and cocos2d
+      This behaviour is mostly seen on some custom engines and cocos2d
 
     - Setting [Everyplay sharedInstance].capture property to nil
       could reset certain default settings to unwanted state, such
