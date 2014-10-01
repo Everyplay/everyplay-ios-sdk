@@ -27,6 +27,36 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v1.8.3 - Oct 1st 2014 (build 1830)
+
+- Generic:
+    - Now supports iOS 8 SDK / Xcode6 GM
+
+    - Fixed recording support against apps supporting the new
+      native resolutions of iPhone 6 and iPhone 6 Plus on iOS 8
+
+    - Fixed video player / editor UI to support new iPhone 6 resolutions
+
+    - Fixed potential video player seek crash on iOS 8
+
+    - iOS 8 fixes for changed Javascript behaviour, fixes social
+      network connections
+
+    - FaceCam now asks video user permission on iOS 8
+
+    - Workaround [UIView layoutSubViews] behaviour on iOS 8:
+
+      Depending on game engine used and how the view handling is implemented,
+      transitioning between views may trigger layoutSubViews and during the
+      process, re-create OpenGL buffers. In some cases, calling EAGLContext
+      renderbufferStorage:fromDrawable fails and may result to frozen graphics
+
+      This is behaviour is mostly seen on some custom engines and cocos2d
+
+    - Setting [Everyplay sharedInstance].capture property to nil
+      could reset certain default settings to unwanted state, such
+      as lowering target video framerate from the default, fixe
+
 ### v1.8.2 - Sep 12th 2014 (build 1820)
 
 - Generic:
