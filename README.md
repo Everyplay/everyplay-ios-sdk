@@ -55,7 +55,7 @@ Everyplay SDK/iOS - Release Notes
 
     - Setting [Everyplay sharedInstance].capture property to nil
       could reset certain default settings to unwanted state, such
-      as lowering target video framerate from the default, fixe
+      as lowering target video framerate from the default, fixed
 
 ### v1.8.2 - Sep 12th 2014 (build 1820)
 
