@@ -26,6 +26,7 @@ extern NSString * const EveryplayAccountDidFailToGetAccessToken;
 
 @class NXOAuth2Account;
 
+NS_CLASS_AVAILABLE(10_7, 4_0)
 @interface EveryplayAccount : NSObject {
 @private
     NXOAuth2Account *oauthAccount;

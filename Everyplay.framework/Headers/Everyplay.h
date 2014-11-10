@@ -16,7 +16,11 @@
  */
 
 #import <Foundation/Foundation.h>
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
+#else
+#import <AppKit/AppKit.h>
+#endif
 
 #import "EveryplayFaceCam.h"
 #import "EveryplayCapture.h"
@@ -56,6 +60,7 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 
 #pragma mark - Compile-time options
 
+NS_CLASS_AVAILABLE(10_7, 4_0)
 @interface EveryplayFeatures : NSObject
 /*
  * Is running on iOS 5 or later?
@@ -82,13 +87,6 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 + (BOOL) disableOpenALMessages;
 
 /*
- * CocosDenshion background music support currently lacks hardware
- * decoder support. To disable recording support for background music,
- * override this class method to return NO.
- */
-+ (BOOL) supportsCocosDenshion;
-
-/*
  * AVFoundation AVAudioPlayer support currently lacks hardware
  * decoder support. To disable recording support for background music,
  * override this class method to return NO.
@@ -100,8 +98,7 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 
 @class EveryplayAccount;
 
-@class EveryplayVideoPlayerViewController;
-
+NS_CLASS_AVAILABLE(10_7, 4_0)
 @protocol EveryplayDelegate <NSObject>
 - (void)everyplayShown;
 - (void)everyplayHidden;
@@ -124,12 +121,15 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 - (void)everyplayThumbnailReadyAtTextureId:(NSNumber *)textureId portraitMode:(NSNumber *)portrait;
 @end
 
+NS_CLASS_AVAILABLE(10_7, 4_0)
 @interface Everyplay : NSObject
 
 #pragma mark - Properties
 @property (nonatomic, unsafe_unretained) EveryplayCapture *capture;
 @property (nonatomic, strong) EveryplayFaceCam *faceCam;
+#if TARGET_OS_IPHONE
 @property (nonatomic, strong) UIViewController *parentViewController;
+#endif
 @property (nonatomic, strong) id <EveryplayDelegate> everyplayDelegate;
 @property (nonatomic, assign) EveryplayFlowDefs flowControl;
 
@@ -139,8 +139,10 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 + (BOOL)isSupported;
 
 + (Everyplay *)initWithDelegate:(id <EveryplayDelegate>)everyplayDelegate;
+#if TARGET_OS_IPHONE
 + (Everyplay *)initWithDelegate:(id <EveryplayDelegate>)everyplayDelegate andParentViewController:(UIViewController *)viewController;
 + (Everyplay *)initWithDelegate:(id <EveryplayDelegate>)everyplayDelegate andAddRootViewControllerForView:(UIView *)view;
+#endif
 
 #pragma mark - Public Methods
 - (void)showEveryplay;
@@ -154,6 +156,9 @@ typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
 #pragma mark - Video playback
 - (void)playVideoWithURL:(NSURL *)videoURL;
 - (void)playVideoWithDictionary:(NSDictionary *)videoDictionary;
+
+#pragma mark - Theming
+- (void)setTheme:(NSDictionary *)theme;
 
 #pragma mark - Manage Accounts
 + (EveryplayAccount *)account;

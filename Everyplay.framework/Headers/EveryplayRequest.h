@@ -55,6 +55,8 @@ typedef enum EveryplayRequestMethod EveryplayRequestMethod;
  request setup and initiate the connection in a single call.
  
  */
+
+NS_CLASS_AVAILABLE(10_7, 4_0)
 @interface EveryplayRequest : NSObject {
 @private
     NXOAuth2Request *oauthRequest;

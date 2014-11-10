@@ -28,6 +28,7 @@ typedef struct {
     float r, g, b, a;
 } EveryplayFaceCamColor;
 
+NS_CLASS_AVAILABLE(10_7, 4_0)
 @interface EveryplayFaceCam : NSObject
 
 // Device support and states

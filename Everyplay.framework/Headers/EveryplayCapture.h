@@ -16,6 +16,7 @@
  */
 
 #import <CoreFoundation/CoreFoundation.h>
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
 
 #import <OpenGLES/ES2/gl.h>
@@ -23,6 +24,10 @@
 
 #import <OpenGLES/ES1/gl.h>
 #import <OpenGLES/ES1/glext.h>
+#else
+#import <AppKit/AppKit.h>
+#import <OpenGL/OpenGL.h>
+#endif
 
 #import <AVFoundation/AVFoundation.h>
 #import <QuartzCore/QuartzCore.h>
@@ -31,7 +36,8 @@
 #define EVERYPLAY_CAPTURE_API_VERSION 2
 #endif
 
-@interface EveryplayCapture : NSObject<AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate>;
+NS_CLASS_AVAILABLE(10_7, 4_0)
+@interface EveryplayCapture : NSObject;
 
 /* Call as [[Everyplay sharedInstance] capture].property */
 
@@ -94,6 +100,7 @@
  * but focus on setting properties and calling helper methods through
  * [[Everyplay sharedInstance] capture]
  */
+#if TARGET_OS_IPHONE
 - (id)initWithView:(UIView *)glview eaglContext:(EAGLContext *)context layer:(CAEAGLLayer *)layer;
 
 - (void)createFramebuffer;
@@ -109,6 +116,7 @@
 
 - (BOOL)afterPresentRenderbuffer;
 - (BOOL)afterPresentRenderbuffer:(GLuint)msaaFramebufferRef;
+#endif
 
 #pragma mark - Helpers
 

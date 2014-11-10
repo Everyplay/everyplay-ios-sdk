@@ -27,6 +27,31 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v1.9.0 - Nov 10th 2014 (build 1901)
+
+- Generic
+  - First iOS 8 Metal graphics support, no support for Live FaceCam
+    preview box or thumbnail files/textures yet
+
+  - Video editor / player core and UI rewritten
+
+  - Everyplay.bundle graphics update, using fewer files and less space
+
+  - Internal changes for UI theming support
+
+  - Landscape support enabled by default for all iPhone views
+
+  - New navigation top bar design to give more space while browsing
+
+  - Improved memory handling
+
+  - Improved analytics
+
+  - Fixed thumbnail texture handling on iOS 8
+
+  - Improved FaceCam audio and video support and removed deprecated API
+    usage warnings while running on iOS 7+
+
 ### v1.8.4 - Oct 9th 2014 (build 1840)
 
 - Generic:
