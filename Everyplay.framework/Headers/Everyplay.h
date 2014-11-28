@@ -128,7 +128,7 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 @property (nonatomic, unsafe_unretained) EveryplayCapture *capture;
 @property (nonatomic, strong) EveryplayFaceCam *faceCam;
 #if TARGET_OS_IPHONE
-@property (nonatomic, strong) UIViewController *parentViewController;
+@property (nonatomic, weak) UIViewController *parentViewController;
 #endif
 @property (nonatomic, strong) id <EveryplayDelegate> everyplayDelegate;
 @property (nonatomic, assign) EveryplayFlowDefs flowControl;

@@ -4,7 +4,9 @@ for your game. You can get these along with the latest integration instructions 
 You can always download the latest SDK upgrades directly from https://github.com/everyplay/everyplay-ios-sdk
 
 Looking for Android version? See https://github.com/everyplay/everyplay-android-sdk
+<br />
 Looking for Unity plugin? See https://github.com/everyplay/everyplay-unity-sdk
+<br />
 Looking for Adobe AIR version? See https://github.com/everyplay/everyplay-air-sdk
 
 Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html) with restrictions. Please see Everyplay Terms of Service at https://everyplay.com/developer-terms-of-service for more information.
@@ -27,30 +29,42 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v1.9.1 - Nov 28th 2014 (build 1910)
+
+- Generic:
+    - Network access and caching optimizations
+
+    - Video seek bar and video ending event fixes for
+      the new video player
+
+    - [Everyplay sharedInstance].parentViewController is now a weak pointer
+
+    - Improved UI orientation handling
+
 ### v1.9.0 - Nov 10th 2014 (build 1901)
 
-- Generic
-  - First iOS 8 Metal graphics support, no support for Live FaceCam
-    preview box or thumbnail files/textures yet
+- Generic:
+    - First iOS 8 Metal graphics support, no support for Live FaceCam
+      preview box or thumbnail files/textures yet
 
-  - Video editor / player core and UI rewritten
+    - Video editor / player core and UI rewritten
 
-  - Everyplay.bundle graphics update, using fewer files and less space
+    - Everyplay.bundle graphics update, using fewer files and less space
 
-  - Internal changes for UI theming support
+    - Internal changes for UI theming support
 
-  - Landscape support enabled by default for all iPhone views
+    - Landscape support enabled by default for all iPhone views
 
-  - New navigation top bar design to give more space while browsing
+    - New navigation top bar design to give more space while browsing
 
-  - Improved memory handling
+    - Improved memory handling
 
-  - Improved analytics
+    - Improved analytics
 
-  - Fixed thumbnail texture handling on iOS 8
+    - Fixed thumbnail texture handling on iOS 8
 
-  - Improved FaceCam audio and video support and removed deprecated API
-    usage warnings while running on iOS 7+
+    - Improved FaceCam audio and video support and removed deprecated API
+      usage warnings while running on iOS 7+
 
 ### v1.8.4 - Oct 9th 2014 (build 1840)
 
