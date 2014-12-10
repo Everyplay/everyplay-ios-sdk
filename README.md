@@ -29,7 +29,7 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
-### v1.9.2 - Dec 10th 2014 (build 1920)
+### v1.9.2 - Dec 10th 2014 (build 1921)
 
 - Generic:
     - [Everyplay initWithDelegate:] improvements
