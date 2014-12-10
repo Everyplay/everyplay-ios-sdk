@@ -29,6 +29,15 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v1.9.2 - Dec 10th 2014 (build 1920)
+
+- Generic:
+    - [Everyplay initWithDelegate:] improvements
+
+    - [Everyplay sharedInstance].everyplayDelegate is now a weak pointer
+
+    - Minor UI and theming improvements
+
 ### v1.9.1 - Nov 28th 2014 (build 1910)
 
 - Generic:

@@ -130,7 +130,7 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 #if TARGET_OS_IPHONE
 @property (nonatomic, weak) UIViewController *parentViewController;
 #endif
-@property (nonatomic, strong) id <EveryplayDelegate> everyplayDelegate;
+@property (nonatomic, weak) id <EveryplayDelegate> everyplayDelegate;
 @property (nonatomic, assign) EveryplayFlowDefs flowControl;
 
 #pragma mark - Singleton
