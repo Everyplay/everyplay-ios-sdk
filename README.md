@@ -29,6 +29,12 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v1.9.3 - Dec 16th 2014 (build 1930)
+
+- Generic:
+    - Fixed an issue with modal share dialog not appearing
+      on some viewController configurations
+
 ### v1.9.2 - Dec 10th 2014 (build 1921)
 
 - Generic:
