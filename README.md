@@ -16,7 +16,8 @@ that recommends to upgrade the SDK. Apps downloaded from the App Store won't hav
 
 Current and previous expiration dates:
 
-- 2015-01-31 (releases from 1.8.1 to CURRENT)
+- 2015-05-31 (releases from 1.9.4 to CURRENT)
+- 2015-01-31 (releases from 1.8.1 to 1.9.3)
 - 2014-09-14 (releases from 1.8 to 1.8)
 - 2014-05-31 (releases from 1.7.4 to 1.7.6)
 - 2014-02-28 (releases from 1.7.1 to 1.7.3)
@@ -29,151 +30,151 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v1.9.4 - Jan 14th 2015 (build 1940)
+
+- Improved Facebook integration by asking server-side
+  configuration status
+
+- Improved AVFoundation/AVAudioPlayer usage against
+  small sound effects
+
 ### v1.9.3 - Dec 16th 2014 (build 1930)
 
-- Generic:
-    - Fixed an issue with modal share dialog not appearing
-      on some viewController configurations
+- Fixed an issue with modal share dialog not appearing
+  on some viewController configurations
 
 ### v1.9.2 - Dec 10th 2014 (build 1921)
 
-- Generic:
-    - [Everyplay initWithDelegate:] improvements
+- [Everyplay initWithDelegate:] improvements
 
-    - [Everyplay sharedInstance].everyplayDelegate is now a weak pointer
+- [Everyplay sharedInstance].everyplayDelegate is now a weak pointer
 
-    - Minor UI and theming improvements
+- Minor UI and theming improvements
 
 ### v1.9.1 - Nov 28th 2014 (build 1910)
 
-- Generic:
-    - Network access and caching optimizations
+- Network access and caching optimizations
 
-    - Video seek bar and video ending event fixes for
-      the new video player
+- Video seek bar and video ending event fixes for
+  the new video player
 
-    - [Everyplay sharedInstance].parentViewController is now a weak pointer
+- [Everyplay sharedInstance].parentViewController is now a weak pointer
 
-    - Improved UI orientation handling
+- Improved UI orientation handling
 
 ### v1.9.0 - Nov 10th 2014 (build 1901)
 
-- Generic:
-    - First iOS 8 Metal graphics support, no support for Live FaceCam
-      preview box or thumbnail files/textures yet
+- First iOS 8 Metal graphics support, no support for Live FaceCam
+  preview box or thumbnail files/textures yet
 
-    - Video editor / player core and UI rewritten
+- Video editor / player core and UI rewritten
 
-    - Everyplay.bundle graphics update, using fewer files and less space
+- Everyplay.bundle graphics update, using fewer files and less space
 
-    - Internal changes for UI theming support
+- Internal changes for UI theming support
 
-    - Landscape support enabled by default for all iPhone views
+- Landscape support enabled by default for all iPhone views
 
-    - New navigation top bar design to give more space while browsing
+- New navigation top bar design to give more space while browsing
 
-    - Improved memory handling
+- Improved memory handling
 
-    - Improved analytics
+- Improved analytics
 
-    - Fixed thumbnail texture handling on iOS 8
+- Fixed thumbnail texture handling on iOS 8
 
-    - Improved FaceCam audio and video support and removed deprecated API
-      usage warnings while running on iOS 7+
+- Improved FaceCam audio and video support and removed deprecated API
+  usage warnings while running on iOS 7+
 
 ### v1.8.4 - Oct 9th 2014 (build 1840)
 
-- Generic:
-    - Improved avatar photo picker and camera orientation handling
+- Improved avatar photo picker and camera orientation handling
 
-    - Improved stereo support for AVFoundation / OpenAL
+- Improved stereo support for AVFoundation / OpenAL
 
-    - OpenAL: Within game code, setting a negative value through
-      alSourcef(x, AL_GAIN, volume) could cause iOS 8 mediaserverd to hang
-      and cause multiple side effects until the device is rebooted, fixed
+- OpenAL: Within game code, setting a negative value through
+  alSourcef(x, AL_GAIN, volume) could cause iOS 8 mediaserverd to hang
+  and cause multiple side effects until the device is rebooted, fixed
 
-    - everyplayFaceCamRecordingPermission delegate improvements
+- everyplayFaceCamRecordingPermission delegate improvements
 
 ### v1.8.3 - Oct 1st 2014 (build 1830)
 
-- Generic:
-    - Now supports iOS 8 SDK / Xcode6 GM
+- Now supports iOS 8 SDK / Xcode6 GM
 
-    - Fixed recording support against apps supporting the new
-      native resolutions of iPhone 6 and iPhone 6 Plus on iOS 8
+- Fixed recording support against apps supporting the new
+  native resolutions of iPhone 6 and iPhone 6 Plus on iOS 8
 
-    - Fixed video player / editor UI to support new iPhone 6 resolutions
+- Fixed video player / editor UI to support new iPhone 6 resolutions
 
-    - Fixed potential video player seek crash on iOS 8
+- Fixed potential video player seek crash on iOS 8
 
-    - iOS 8 fixes for changed Javascript behaviour, fixes social
-      network connections
+- iOS 8 fixes for changed Javascript behaviour, fixes social
+  network connections
 
-    - FaceCam now asks video user permission on iOS 8
+- FaceCam now asks video user permission on iOS 8
 
-    - Workaround [UIView layoutSubViews] behaviour on iOS 8:
+- Workaround [UIView layoutSubViews] behaviour on iOS 8:
 
-      Depending on game engine used and how the view handling is implemented,
-      transitioning between views may trigger layoutSubViews and during the
-      process, re-create OpenGL buffers. In some cases, calling EAGLContext
-      renderbufferStorage:fromDrawable fails and may result to frozen graphics
+  Depending on game engine used and how the view handling is implemented,
+  transitioning between views may trigger layoutSubViews and during the
+  process, re-create OpenGL buffers. In some cases, calling EAGLContext
+  renderbufferStorage:fromDrawable fails and may result to frozen graphics
 
-      This behaviour is mostly seen on some custom engines and cocos2d
+  This behaviour is mostly seen on some custom engines and cocos2d
 
-    - Setting [Everyplay sharedInstance].capture property to nil
-      could reset certain default settings to unwanted state, such
-      as lowering target video framerate from the default, fixed
+- Setting [Everyplay sharedInstance].capture property to nil
+  could reset certain default settings to unwanted state, such
+  as lowering target video framerate from the default, fixed
 
 ### v1.8.2 - Sep 12th 2014 (build 1820)
 
-- Generic:
-    - iOS 8 view initialization fixes
+- iOS 8 view initialization fixes
 
-    - CPU optimizations for games with hard 60fps requirement
+- CPU optimizations for games with hard 60fps requirement
 
-    - AVFoundation: AVAudioPlayer now supports initWithData: method
+- AVFoundation: AVAudioPlayer now supports initWithData: method
 
-    - AVFoundation/OpenAL: Backgrounding application during initial splash screen
-      could break audio state handling, fixed
+- AVFoundation/OpenAL: Backgrounding application during initial splash screen
+  could break audio state handling, fixed
 
 ### v1.8.1 - Aug 27th 2014 (build 1810)
 
-- Generic:
-    - Major audio internals rework for future features, optimized for iOS 7
+- Major audio internals rework for future features, optimized for iOS 7
 
-      As a result, there's less audio interruptions and potential issues that
-      could cause losing audio output, recorded audio to be silent or go out
-      of sync, mediaserverd crashing and causing wide load of generic issues
+  As a result, there's less audio interruptions and potential issues that
+  could cause losing audio output, recorded audio to be silent or go out
+  of sync, mediaserverd crashing and causing wide load of generic issues
 
-    - Now supports AudioQueue recording against linear PCM
-      and compressed formats (such as AAC)
+- Now supports AudioQueue recording against linear PCM
+  and compressed formats (such as AAC)
 
-    - The audio core is now more sample rate agnostic, but 44.1 kHz is still
-      considered the optimal one
+- The audio core is now more sample rate agnostic, but 44.1 kHz is still
+  considered the optimal one
 
-    - OpenAL: Improved source/buffer instance refcounting and thread-safety
+- OpenAL: Improved source/buffer instance refcounting and thread-safety
 
-    - OpenAL: Loading audio samples with alBufferData now prefers the
-      original sample rate specified and using less memory
+- OpenAL: Loading audio samples with alBufferData now prefers the
+  original sample rate specified and using less memory
 
-    - OpenAL: Loading certain audio samples caused audio clicks, fixed
+- OpenAL: Loading certain audio samples caused audio clicks, fixed
 
-    - AVFoundation: AVAudioPlayer now supports duration and numberOfChannels
-      properties
+- AVFoundation: AVAudioPlayer now supports duration and numberOfChannels
+  properties
 
-    - AVFoundation: Improved audio streaming playback
+- AVFoundation: Improved audio streaming playback
 
-    - Fixed rare race condition in graphics recording that could have
-      caused dropped video frames or not adding new frames to video
+- Fixed rare race condition in graphics recording that could have
+  caused dropped video frames or not adding new frames to video
 
-    - Video editor now adds FaceCam recording UI buttons only after
-      iOS user permission check
+- Video editor now adds FaceCam recording UI buttons only after
+  iOS user permission check
 
-    - Now comes with Adobe AIR support:
+- Now comes with Adobe AIR support:
 
-      https://github.com/Everyplay/everyplay-air-sdk
+  https://github.com/Everyplay/everyplay-air-sdk
 
-    - Unity plugin relocated to https://github.com/everyplay/everyplay-unity-sdk
+- Unity plugin relocated to https://github.com/everyplay/everyplay-unity-sdk
 
 ### v1.8.0 - May 14th 2014 (build 1801)
 
