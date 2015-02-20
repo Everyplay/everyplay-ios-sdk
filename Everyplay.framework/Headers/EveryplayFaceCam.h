@@ -60,6 +60,7 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 
 // Target texture
 @property (nonatomic, assign) int targetTextureId;
+@property (nonatomic, weak) id targetTextureMetal;
 @property (nonatomic, assign) int targetTextureWidth;
 @property (nonatomic, assign) int targetTextureHeight;
 

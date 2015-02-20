@@ -90,6 +90,7 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 
 /* Thumbnail target texture */
 @property (nonatomic, assign) int thumbnailTargetTextureId;
+@property (nonatomic, weak) id thumbnailTargetTextureMetal;
 @property (nonatomic, assign) int thumbnailTargetTextureWidth;
 @property (nonatomic, assign) int thumbnailTargetTextureHeight;
 

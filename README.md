@@ -30,6 +30,24 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v1.9.5 - Feb 20th 2015 (build 1950)
+
+- iOS 8 Metal improvements: Now supports Live FaceCam preview box,
+  thumbnail files/textures and using MTLPixelFormatRGBA8Unorm_sRGB
+
+- Now supports OpenAL audio streaming through alSourceQueueBuffers
+
+- Fix a conditition between showing modal share dialog and video editor
+  that could lead to everyplayHidden delegate not properly called, potentially
+  leading to game not being resumed as expected
+
+- Fixed an issue with Cocos2d's scaled graphics on iPhone 6 Plus that prevented
+  the recording from starting properly
+
+- Facebook: Remove use of deprecated publish_stream permission
+
+- Lighter UI theme
+
 ### v1.9.4 - Jan 14th 2015 (build 1940)
 
 - Improved Facebook integration by asking server-side
