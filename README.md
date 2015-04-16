@@ -16,7 +16,8 @@ that recommends to upgrade the SDK. Apps downloaded from the App Store won't hav
 
 Current and previous expiration dates:
 
-- 2015-05-31 (releases from 1.9.4 to CURRENT)
+- 2015-09-14 (releases from 1.9.6 to CURRENT)
+- 2015-05-31 (releases from 1.9.4 to 1.9.5)
 - 2015-01-31 (releases from 1.8.1 to 1.9.3)
 - 2014-09-14 (releases from 1.8 to 1.8)
 - 2014-05-31 (releases from 1.7.4 to 1.7.6)
@@ -29,6 +30,18 @@ Current and previous expiration dates:
 
 Everyplay SDK/iOS - Release Notes
 =================================
+
+### v1.9.6 - Apr 16th 2015 (build 1960)
+
+- Improved graphics support against Unity 5.x
+
+- Metal: Fixed thumbnail texture being flipped
+
+- Metal: Fixed to support dynamic screen resolution changes
+
+- Fixed a regression against AVAudioPlayer initWithData: support
+
+- Fixed a compatibility issue with InMobi SDK
 
 ### v1.9.5 - Feb 20th 2015 (build 1950)
 
