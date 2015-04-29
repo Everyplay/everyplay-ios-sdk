@@ -31,6 +31,11 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v1.9.6 - Apr 28th 2015 (build 1961)
+
+- Metal: Fixed Facecam session handling when reseting
+  session to audio only (1961)
+
 ### v1.9.6 - Apr 16th 2015 (build 1960)
 
 - Improved graphics support against Unity 5.x
