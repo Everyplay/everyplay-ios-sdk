@@ -31,6 +31,34 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v1.9.7 - May 26th 2015 (build 1970)
+
+- Metal: Graphics performance and memory usage optimizations
+
+- Metal: Fixed a small memory leak that happened on every frame
+  even while not recording
+
+- Metal: Now supports HUD-less recording feature through
+  [[[Everyplay sharedInstance] capture] snapshotRenderbuffer];
+
+- Removed IDFA related code (AdSupport.framework), now uses IFV
+
+- Removed EveryplaySoundEngine, OpenAL and AVFoundation implementations.
+  Now uses Apple's high performance implementations when available
+
+- Removed legacy OpenGL graphics integration API's from EveryplayCapture
+
+- Removed support for file based thumbnails. If you use thumbnails,
+  switch to texture based implementation
+
+- Removed [Everyplay initWithDelegate:andAddRootViewControllerForView:]
+  It was a helper for older world iOS apps that didn't implement
+  UIViewController. Today, it's safe to assume that your code has them
+
+- Increased the default video bitrate quality a bit
+
+- Fixed a potential audio encoder memory leak while recording
+
 ### v1.9.6 - Apr 28th 2015 (build 1961)
 
 - Metal: Fixed Facecam session handling when reseting

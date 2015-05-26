@@ -64,14 +64,6 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 @property (nonatomic, assign) BOOL workaroundFrameJerking;
 
 /*
- * By default, Everyplay tries to workaround certain older
- * view and orientation handling issues. If you experience
- * problems (such as recorded view showing in wrong orientation),
- * disable this workaround.
- */
-@property (nonatomic, assign) BOOL workaroundLegacyOrientations;
-
-/*
  * Disable recording support for single-core CPU devices
  *
  * Depending on a game and the device, recording a gameplay
@@ -93,31 +85,6 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 @property (nonatomic, weak) id thumbnailTargetTextureMetal;
 @property (nonatomic, assign) int thumbnailTargetTextureWidth;
 @property (nonatomic, assign) int thumbnailTargetTextureHeight;
-
-#pragma mark - screen (OpenGL) capturing
-
-/*
- * For advanced use cases only. You shouldn't need to call these,
- * but focus on setting properties and calling helper methods through
- * [[Everyplay sharedInstance] capture]
- */
-#if TARGET_OS_IPHONE
-- (id)initWithView:(UIView *)glview eaglContext:(EAGLContext *)context layer:(CAEAGLLayer *)layer;
-
-- (void)createFramebuffer;
-- (void)createFramebuffer:(GLuint)framebufferRef;
-- (void)createFramebuffer:(GLuint)framebufferRef withMSAA:(GLuint)msaaFramebufferRef;
-- (void)deleteFramebuffer;
-
-- (void)setActiveFramebufferCallback:(void (^)(GLuint activeFramebuffer))callback;
-
-- (GLuint)msaaFramebuffer:(GLuint)msaaFramebufferRef;
-
-- (BOOL)beforePresentRenderbuffer:(GLuint)framebufferRef;
-
-- (BOOL)afterPresentRenderbuffer;
-- (BOOL)afterPresentRenderbuffer:(GLuint)msaaFramebufferRef;
-#endif
 
 #pragma mark - Helpers
 

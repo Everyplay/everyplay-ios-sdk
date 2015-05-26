@@ -26,7 +26,6 @@
 #import "EveryplayCapture.h"
 #import "EveryplayAccount.h"
 #import "EveryplayRequest.h"
-#import "EveryplaySoundEngine.h"
 
 #pragma mark - Developer metadata
 extern NSString * const kEveryplayMetadataScoreInteger;    // @"score"
@@ -73,25 +72,6 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
  * Useful for disabling functionality on older devices.
  */
 + (NSUInteger) numCores;
-
-/*
- * To disable Everyplay OpenAL implementation, override this class
- * method to return NO.
- */
-+ (BOOL) supportsOpenAL;
-
-/*
- * To disable Everyplay OpenAL "missing implementation" messages, override
- * this class method to return YES.
- */
-+ (BOOL) disableOpenALMessages;
-
-/*
- * AVFoundation AVAudioPlayer support currently lacks hardware
- * decoder support. To disable recording support for background music,
- * override this class method to return NO.
- */
-+ (BOOL) supportsAVFoundation;
 @end
 
 #pragma mark -
@@ -115,6 +95,7 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 - (void)everyplayUploadDidProgress:(NSNumber *)videoId progress:(NSNumber *)progress;
 - (void)everyplayUploadDidComplete:(NSNumber *)videoId;
 
+/* File based thumbnails deprecated, use textures */
 - (void)everyplayThumbnailReadyAtFilePath:(NSString *)thumbnailFilePath;
 - (void)everyplayThumbnailReadyAtURL:(NSURL *)thumbnailUrl;
 
@@ -143,7 +124,6 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 + (Everyplay *)initWithDelegate:(id <EveryplayDelegate>)everyplayDelegate;
 #if TARGET_OS_IPHONE
 + (Everyplay *)initWithDelegate:(id <EveryplayDelegate>)everyplayDelegate andParentViewController:(UIViewController *)viewController;
-+ (Everyplay *)initWithDelegate:(id <EveryplayDelegate>)everyplayDelegate andAddRootViewControllerForView:(UIView *)view;
 #endif
 
 #pragma mark - Public Methods
