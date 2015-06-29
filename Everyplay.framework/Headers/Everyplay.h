@@ -95,10 +95,6 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 - (void)everyplayUploadDidProgress:(NSNumber *)videoId progress:(NSNumber *)progress;
 - (void)everyplayUploadDidComplete:(NSNumber *)videoId;
 
-/* File based thumbnails deprecated, use textures */
-- (void)everyplayThumbnailReadyAtFilePath:(NSString *)thumbnailFilePath;
-- (void)everyplayThumbnailReadyAtURL:(NSURL *)thumbnailUrl;
-
 - (void)everyplayThumbnailReadyAtTextureId:(NSNumber *)textureId portraitMode:(NSNumber *)portrait;
 - (void)everyplayMetalThumbnailReadyAtTexture:(id)texture portraitMode:(NSNumber *)portrait;
 

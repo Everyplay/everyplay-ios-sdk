@@ -31,6 +31,25 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v1.9.8 - Jun 29th 2015 (build 1980)
+
+- Now allows 60fps recordings on iOS 8+ devices with
+  A7 CPU or later (devices with 64bit capability)
+
+  To change the target framerate from the default 30fps, call
+  [[Everyplay sharedInstance] capture].targetFPS
+
+- Metal: CPU performance and snapshotRenderbuffer improvements
+
+- Live FaceCam: When the internal preview box is hidden and
+  a target texture is in use, the video content is no longer
+  encoded to a separate file and doesn't show separately in
+  the video player
+
+- Removed thumbnailWidth property from EveryplayCapture
+
+- Removed file based everyplayThumbnailReadyAt(FilePath|URL): delegates
+
 ### v1.9.7 - May 26th 2015 (build 1970)
 
 - Metal: Graphics performance and memory usage optimizations

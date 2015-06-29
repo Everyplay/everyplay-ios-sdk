@@ -41,7 +41,7 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 
 /* Call as [[Everyplay sharedInstance] capture].property */
 
-/* Set target framerate for the video, defaults to 30fps. (Valid values: 30, 20, 15) */
+/* Set target framerate for the video, defaults to 30fps. (Valid values: 60, 30, 20, 15) */
 @property (nonatomic, assign) NSUInteger targetFPS;
 /* Set video quality, defaults to 2. (Valid values: 1-4) */
 @property (nonatomic, assign) NSUInteger motionFactor;
@@ -76,9 +76,6 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 @property (nonatomic, readonly) BOOL isRecordingSupported;
 @property (nonatomic, readonly) BOOL isRecording;
 @property (nonatomic, readonly) BOOL isPaused;
-
-/* File based thumbnail target */
-@property (nonatomic, assign) int thumbnailWidth;
 
 /* Thumbnail target texture */
 @property (nonatomic, assign) int thumbnailTargetTextureId;
