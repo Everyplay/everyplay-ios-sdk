@@ -16,7 +16,8 @@ that recommends to upgrade the SDK. Apps downloaded from the App Store won't hav
 
 Current and previous expiration dates:
 
-- 2015-09-14 (releases from 1.9.6 to CURRENT)
+- 2016-02-14 (releases from 1.9.9 to CURRENT)
+- 2015-09-14 (releases from 1.9.6 to 1.9.8)
 - 2015-05-31 (releases from 1.9.4 to 1.9.5)
 - 2015-01-31 (releases from 1.8.1 to 1.9.3)
 - 2014-09-14 (releases from 1.8 to 1.8)
@@ -30,6 +31,14 @@ Current and previous expiration dates:
 
 Everyplay SDK/iOS - Release Notes
 =================================
+
+### v1.9.9 - Aug 10th 2015 (build 1990)
+
+- Critical update for iOS 9 App Transport Security (ATS)
+  compatibility
+
+- Fixed iOS 9 SpriteKit inverted graphics issue when
+  running on a device that uses Metal
 
 ### v1.9.8 - Jun 29th 2015 (build 1980)
 

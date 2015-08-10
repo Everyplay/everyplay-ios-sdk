@@ -1,20 +1,3 @@
-/*
- * Copyright 2012-2014 Applifier
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- */
-
 #import <Foundation/Foundation.h>
 #if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
@@ -28,19 +11,19 @@
 #import "EveryplayRequest.h"
 
 #pragma mark - Developer metadata
-extern NSString * const kEveryplayMetadataScoreInteger;    // @"score"
-extern NSString * const kEveryplayMetadataLevelInteger;    // @"level"
-extern NSString * const kEveryplayMetadataLevelNameString; // @"level_name"
+extern NSString *const kEveryplayMetadataScoreInteger;    // @"score"
+extern NSString *const kEveryplayMetadataLevelInteger;    // @"level"
+extern NSString *const kEveryplayMetadataLevelNameString; // @"level_name"
 
 #pragma mark - View controller flow settings
 
 typedef enum  {
-    EveryplayFlowReturnsToGame         = 1 << 0,    // Default
-    EveryplayFlowReturnsToVideoPlayer  = 1 << 1
+    EveryplayFlowReturnsToGame = 1 << 0,    // Default
+    EveryplayFlowReturnsToVideoPlayer = 1 << 1
 } EveryplayFlowDefs;
 
 #pragma mark - Error codes
-extern NSString * const kEveryplayErrorDomain;       // @"com.everyplay"
+extern NSString *const kEveryplayErrorDomain;       // @"com.everyplay"
 
 extern const int kEveryplayLoginCanceledError;       // 100
 extern const int kEveryplayMovieExportCanceledError; // 101
@@ -48,14 +31,14 @@ extern const int kEveryplayFileUploadError;          // 102
 
 #pragma mark - Notifications
 
-extern NSString * const EveryplayAccountDidChangeNotification;
-extern NSString * const EveryplayDidFailToRequestAccessNotification;
+extern NSString *const EveryplayAccountDidChangeNotification;
+extern NSString *const EveryplayDidFailToRequestAccessNotification;
 
 #pragma mark - Handler
 
-typedef void(^EveryplayAccessRequestCompletionHandler)(NSError *error);
-typedef void(^EveryplayPreparedAuthorizationURLHandler)(NSURL *preparedURL);
-typedef void(^EveryplayDataLoadingHandler)(NSError *error, id data);
+typedef void (^EveryplayAccessRequestCompletionHandler)(NSError *error);
+typedef void (^EveryplayPreparedAuthorizationURLHandler)(NSURL *preparedURL);
+typedef void (^EveryplayDataLoadingHandler)(NSError *error, id data);
 
 #pragma mark - Compile-time options
 
@@ -65,13 +48,13 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
  * Is running on iOS 5 or later?
  * Useful for disabling functionality on older devices.
  */
-+ (BOOL) isSupported;
++ (BOOL)isSupported;
 
 /*
  * Returns the number of CPU cores on device.
  * Useful for disabling functionality on older devices.
  */
-+ (NSUInteger) numCores;
++ (NSUInteger)numCores;
 @end
 
 #pragma mark -
@@ -79,7 +62,7 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 @class EveryplayAccount;
 
 NS_CLASS_AVAILABLE(10_7, 4_0)
-@protocol EveryplayDelegate <NSObject>
+@protocol EveryplayDelegate<NSObject>
 - (void)everyplayShown;
 - (void)everyplayHidden;
 @optional
@@ -109,7 +92,7 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 #if TARGET_OS_IPHONE
 @property (nonatomic, weak) UIViewController *parentViewController;
 #endif
-@property (nonatomic, weak) id <EveryplayDelegate> everyplayDelegate;
+@property (nonatomic, weak) id<EveryplayDelegate> everyplayDelegate;
 @property (nonatomic, assign) EveryplayFlowDefs flowControl;
 
 #pragma mark - Singleton
@@ -117,9 +100,9 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 
 + (BOOL)isSupported;
 
-+ (Everyplay *)initWithDelegate:(id <EveryplayDelegate>)everyplayDelegate;
++ (Everyplay *)initWithDelegate:(id<EveryplayDelegate>)everyplayDelegate;
 #if TARGET_OS_IPHONE
-+ (Everyplay *)initWithDelegate:(id <EveryplayDelegate>)everyplayDelegate andParentViewController:(UIViewController *)viewController;
++ (Everyplay *)initWithDelegate:(id<EveryplayDelegate>)everyplayDelegate andParentViewController:(UIViewController *)viewController;
 #endif
 
 #pragma mark - Public Methods
@@ -161,4 +144,4 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 
 #pragma mark - Macros
 
-#define EVERYPLAY_CANCELED(error) ([error.domain isEqualToString:(NSString *)kEveryplayErrorDomain] && error.code == kEveryplayLoginCanceledError)
+#define EVERYPLAY_CANCELED(error) ([error.domain isEqualToString:(NSString *) kEveryplayErrorDomain] && error.code == kEveryplayLoginCanceledError)
