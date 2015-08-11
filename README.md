@@ -40,6 +40,9 @@ Everyplay SDK/iOS - Release Notes
 - Fixed iOS 9 SpriteKit inverted graphics issue when
   running on a device that uses Metal
 
+- Fixed on audio issue with continuous recording when
+  the session lifetime exceeds 5 minutes
+
 ### v1.9.8 - Jun 29th 2015 (build 1980)
 
 - Now allows 60fps recordings on iOS 8+ devices with
