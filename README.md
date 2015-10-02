@@ -32,6 +32,27 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v2.0 - Oct 2nd 2015 (build 2000)
+
+- Metal: Fixes a scenario with recent Unity 5.2 release,
+  where running the app within Xcode works for recording,
+  but doesn't record when launched without Xcode
+
+- Metal: Frame synchronization and snapshotRenderbuffer
+  improvements
+
+- Now built with Xcode 7 and Bitcode support enabled
+
+- Removed CFBundleExecutable from Everyplay.bundle/Info.plist,
+  that causes app submit error with Xcode 7
+
+- Due to Bitcode requirements, iOS 5 support is now dropped
+
+- Fixes a rare crash with data prefetch and session handling
+
+- Improve logout behaviour for Facebook/Twitter accounts,
+  allowing to use different accounts
+
 ### v1.9.9 - Aug 10th 2015 (build 1990)
 
 - Critical update for iOS 9 App Transport Security (ATS)
