@@ -32,6 +32,25 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v2.0.1 - Oct 9th 2015 (build 2010)
+
+- Fixed audio glitch issue against the new iPhone 6S
+
+  iPhone 6S prevents hardware sample rate to change from the
+  default 48kHz in some situations, causing trouble with
+  certain audio processing libraries. In older releases,
+  this may appear as repeated clicking sound within the
+  recording
+
+- Fix iOS 9 audio compatibility issues with OpenAL
+  and AVFoundation's AVAudioPlayer/AVAudioEngine
+
+  Older releases than 1.9.7 may work, but an upgrade is
+  recommended due to iPhone 6S issues mentioned above
+
+- Workaround AVAudioPlayer related issue with volume
+  fade control
+
 ### v2.0 - Oct 2nd 2015 (build 2000)
 
 - Metal: Fixes a scenario with recent Unity 5.2 release,
