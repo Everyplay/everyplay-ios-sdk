@@ -1,11 +1,24 @@
 #import <Foundation/Foundation.h>
 
+#if !((TARGET_OS_MAC && !TARGET_OS_IPHONE) || (TARGET_OS_IPHONE && TARGET_OS_IOS))
+#define EVERYPLAY_NO_FACECAM_SUPPORT 1
+#endif
+
+#if !EVERYPLAY_NO_FACECAM_SUPPORT
+#import <AVFoundation/AVFoundation.h>
+
 typedef enum {
     EVERYPLAY_FACECAM_PREVIEW_ORIGIN_TOP_LEFT = 0,
     EVERYPLAY_FACECAM_PREVIEW_ORIGIN_TOP_RIGHT,
     EVERYPLAY_FACECAM_PREVIEW_ORIGIN_BOTTOM_LEFT,
     EVERYPLAY_FACECAM_PREVIEW_ORIGIN_BOTTOM_RIGHT
 } EveryplayFaceCamPreviewOrigin;
+
+typedef enum {
+    EVERYPLAY_FACECAM_RECORDING_MODE_RECORD_AUDIO = 0,
+    EVERYPLAY_FACECAM_RECORDING_MODE_RECORD_VIDEO,
+    EVERYPLAY_FACECAM_RECORDING_MODE_PASS_THROUGH
+} EveryplayFaceCamRecordingMode;
 
 typedef struct {
     float r, g, b, a;
@@ -26,6 +39,7 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 @property (nonatomic, readonly) float audioPowerLevel;
 
 // Options
+@property (nonatomic, assign) EveryplayFaceCamRecordingMode recordingMode;
 @property (nonatomic, assign) BOOL monitorAudioLevels;
 @property (nonatomic, assign) BOOL audioOnly;
 
@@ -52,4 +66,12 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 - (void)startSession;
 - (void)stopSession;
 
++ (EveryplayFaceCamPreviewOrigin)stringToFaceCamOrigin:(NSString *)corner;
++ (NSString *)faceCamOriginToString:(EveryplayFaceCamPreviewOrigin)corner;
+
++ (AVCaptureVideoOrientation)stringToCaptureVideoOrientation:(NSString *)orientation;
++ (NSString *)captureVideoOrientationToString:(AVCaptureVideoOrientation)orientation;
+
 @end
+
+#endif

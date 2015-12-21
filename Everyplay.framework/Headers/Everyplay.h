@@ -87,7 +87,7 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 @interface Everyplay : NSObject
 
 #pragma mark - Properties
-@property (nonatomic, unsafe_unretained) EveryplayCapture *capture;
+@property (nonatomic, strong) EveryplayCapture *capture;
 @property (nonatomic, strong) EveryplayFaceCam *faceCam;
 #if TARGET_OS_IPHONE
 @property (nonatomic, weak) UIViewController *parentViewController;

@@ -16,7 +16,8 @@ that recommends to upgrade the SDK. Apps downloaded from the App Store won't hav
 
 Current and previous expiration dates:
 
-- 2016-02-14 (releases from 1.9.9 to CURRENT)
+- 2015-09-12 (releases from 2.1.0 to CURRENT)
+- 2016-02-14 (releases from 1.9.9 to 2.0.1)
 - 2015-09-14 (releases from 1.9.6 to 1.9.8)
 - 2015-05-31 (releases from 1.9.4 to 1.9.5)
 - 2015-01-31 (releases from 1.8.1 to 1.9.3)
@@ -31,6 +32,35 @@ Current and previous expiration dates:
 
 Everyplay SDK/iOS - Release Notes
 =================================
+
+### v2.1 - Dec 21st 2015 (build 2100)
+
+- Internal refactoring of all graphics related code
+
+- Now defaults to 60fps recording, previously optional
+
+- Improved frame synchronization
+
+- Improved view transition controller logic
+
+- Improvements to Live FaceCam recording modes
+
+- Metal: Fixed sRGB support
+
+- Metal: Improves iPad Pro support on certain cases
+  like with SpriteKit on iOS 9
+
+- Metal: Improves support for recording content that
+  allows both portrait and landscape modes
+
+- GLES: Added additional graphics state validation to
+  see if recording content can cause problems, like
+  black screen happening while recording. Fixes
+  SpriteKit behaviour on iOS 9 when used with GLES
+
+- Improved audio related handling with pausing/resuming
+  recording in cases where there are no audio sources
+  to record
 
 ### v2.0.1 - Oct 9th 2015 (build 2010)
 
