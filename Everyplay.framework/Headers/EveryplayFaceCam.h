@@ -1,5 +1,9 @@
 #import <Foundation/Foundation.h>
 
+#if !defined(TARGET_OS_IOS) && defined(TARGET_OS_IPHONE)
+#define TARGET_OS_IOS TARGET_OS_IPHONE
+#endif
+
 #if !((TARGET_OS_MAC && !TARGET_OS_IPHONE) || (TARGET_OS_IPHONE && TARGET_OS_IOS))
 #define EVERYPLAY_NO_FACECAM_SUPPORT 1
 #endif
