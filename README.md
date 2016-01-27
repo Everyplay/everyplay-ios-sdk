@@ -33,6 +33,12 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v2.1.1 - Jan 27th 2016 (build 2110)
+
+- Fixed application freezing when returning from background on iOS when using OpenGL ES
+
+- Fixed compilation to work with xCode6
+
 ### v2.1 - Dec 21st 2015 (build 2100)
 
 - Internal refactoring of all graphics related code
