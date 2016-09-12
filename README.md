@@ -16,7 +16,8 @@ that recommends to upgrade the SDK. Apps downloaded from the App Store won't hav
 
 Current and previous expiration dates:
 
-- 2016-09-12 (releases from 2.1.0 to CURRENT)
+- 2017-09-12 (releases from 2.1.2 to CURRENT)
+- 2016-09-12 (releases from 2.1.0 to 2.1.1)
 - 2016-02-14 (releases from 1.9.9 to 2.0.1)
 - 2015-09-14 (releases from 1.9.6 to 1.9.8)
 - 2015-05-31 (releases from 1.9.4 to 1.9.5)
@@ -32,6 +33,16 @@ Current and previous expiration dates:
 
 Everyplay SDK/iOS - Release Notes
 =================================
+
+### v2.1.2 - Sep 12th 2016 (build 2120)
+
+- Now supports iOS 10
+
+- Fixed a small iOS 9 specific memory leak
+
+- Added a property maxRecordingSecondsLength for setting the max recording length in seconds
+
+- Fixed running with XCode address sanitizer
 
 ### v2.1.1 - Jan 27th 2016 (build 2110)
 

@@ -36,6 +36,14 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
  * especially for online games.
  */
 @property (nonatomic, assign) NSUInteger maxRecordingMinutesLength;
+/*
+ * Set maximum recording length in seconds, defaults to unlimited.
+ *
+ * If the recording session goes over the maximum length set, the resulting
+ * video will have the content recorded within last N seconds, which is suitable
+ * especially for online games.
+ */
+@property (nonatomic, assign) NSUInteger maxRecordingSecondsLength;
 
 /* Optimize for low memory devices, disabled by default. */
 @property (nonatomic, assign) BOOL lowMemoryDevice;
