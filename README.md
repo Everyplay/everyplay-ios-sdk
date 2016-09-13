@@ -34,6 +34,10 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v2.1.2 - Sep 13th 2016 (build 2121)
+
+- Replace expiration date dialog with log message 
+
 ### v2.1.2 - Sep 12th 2016 (build 2120)
 
 - Now supports iOS 10
