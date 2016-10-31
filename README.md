@@ -34,6 +34,10 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v2.1.3 - Oct 31st 2016 (build 2130)
+
+- Fixed social media login on iOS 10 devices
+
 ### v2.1.2 - Sep 13th 2016 (build 2121)
 
 - Replace expiration date dialog with log message 
