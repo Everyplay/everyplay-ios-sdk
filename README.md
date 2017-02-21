@@ -16,7 +16,8 @@ that recommends to upgrade the SDK. Apps downloaded from the App Store won't hav
 
 Current and previous expiration dates:
 
-- 2017-09-12 (releases from 2.1.2 to CURRENT)
+- 2017-02-14 (releases from 2.1.4 to CURRENT)
+- 2017-09-12 (releases from 2.1.2 to 2.1.3)
 - 2016-09-12 (releases from 2.1.0 to 2.1.1)
 - 2016-02-14 (releases from 1.9.9 to 2.0.1)
 - 2015-09-14 (releases from 1.9.6 to 1.9.8)
@@ -33,6 +34,12 @@ Current and previous expiration dates:
 
 Everyplay SDK/iOS - Release Notes
 =================================
+
+### v2.1.4 - Feb 14th 2017
+
+- Improved ATS compliance
+
+- OpenAL fix on A5 devices
 
 ### v2.1.3 - Oct 31st 2016 (build 2130)
 
