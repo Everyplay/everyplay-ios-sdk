@@ -16,8 +16,8 @@ that recommends to upgrade the SDK. Apps downloaded from the App Store won't hav
 
 Current and previous expiration dates:
 
-- 2017-02-14 (releases from 2.1.4 to CURRENT)
-- 2017-09-12 (releases from 2.1.2 to 2.1.3)
+- 2018-09-12 (releases from 2.1.5 to CURRENT)
+- 2017-09-12 (releases from 2.1.2 to 2.1.4)
 - 2016-09-12 (releases from 2.1.0 to 2.1.1)
 - 2016-02-14 (releases from 1.9.9 to 2.0.1)
 - 2015-09-14 (releases from 1.9.6 to 1.9.8)
@@ -35,6 +35,10 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v2.1.5 - May 22nd 2017
+
+- Metal recording improvements
+
 ### v2.1.4 - Feb 14th 2017
 
 - Improved ATS compliance
@@ -47,7 +51,7 @@ Everyplay SDK/iOS - Release Notes
 
 ### v2.1.2 - Sep 13th 2016 (build 2121)
 
-- Replace expiration date dialog with log message 
+- Replace expiration date dialog with log message
 
 ### v2.1.2 - Sep 12th 2016 (build 2120)
 
