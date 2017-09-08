@@ -35,6 +35,10 @@ Current and previous expiration dates:
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v2.1.7 - Sep 8th 2017
+
+- Improved Twitter login compatibility
+
 ### v2.1.6 - June 13th 2017
 
 - Fixed Google login and YouTube sharing
