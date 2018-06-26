@@ -5,10 +5,7 @@
 #import <AppKit/AppKit.h>
 #endif
 
-#import "EveryplayFaceCam.h"
 #import "EveryplayCapture.h"
-#import "EveryplayAccount.h"
-#import "EveryplayRequest.h"
 
 #pragma mark - Developer metadata
 extern NSString *const kEveryplayMetadataScoreInteger;    // @"score"
@@ -69,17 +66,11 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 - (void)everyplayReadyForRecording:(NSNumber *)enabled;
 - (void)everyplayRecordingStarted;
 - (void)everyplayRecordingStopped;
-
-- (void)everyplayFaceCamSessionStarted;
-- (void)everyplayFaceCamRecordingPermission:(NSNumber *)granted;
-- (void)everyplayFaceCamSessionStopped;
-
-- (void)everyplayUploadDidStart:(NSNumber *)videoId;
-- (void)everyplayUploadDidProgress:(NSNumber *)videoId progress:(NSNumber *)progress;
-- (void)everyplayUploadDidComplete:(NSNumber *)videoId;
+- (void)everyplayFileReady:(NSString *)videoURL;
 
 - (void)everyplayThumbnailReadyAtTextureId:(NSNumber *)textureId portraitMode:(NSNumber *)portrait;
 - (void)everyplayMetalThumbnailReadyAtTexture:(id)texture portraitMode:(NSNumber *)portrait;
+
 
 @end
 
@@ -88,7 +79,7 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 
 #pragma mark - Properties
 @property (nonatomic, strong) EveryplayCapture *capture;
-@property (nonatomic, strong) EveryplayFaceCam *faceCam;
+
 #if TARGET_OS_IPHONE
 @property (nonatomic, weak) UIViewController *parentViewController;
 #endif
@@ -106,36 +97,20 @@ NS_CLASS_AVAILABLE(10_7, 4_0)
 #endif
 
 #pragma mark - Public Methods
-- (void)showEveryplay;
-- (void)showEveryplayWithPath:(NSString *)path;
+//- (void)showEveryplay;
+//- (void)showEveryplayWithPath:(NSString *)path;
 - (void)showEveryplaySharingModal;
 - (void)hideEveryplay;
 - (void)playLastRecording;
+- (void)getEveryplayFilepath;
 
 - (void)mergeSessionDeveloperData:(NSDictionary *)dictionary;
-
+/*
 #pragma mark - Video playback
 - (void)playVideoWithURL:(NSURL *)videoURL;
 - (void)playVideoWithDictionary:(NSDictionary *)videoDictionary;
+*/
 
-#pragma mark - Theming
-- (void)setTheme:(NSDictionary *)theme;
-
-#pragma mark - Manage Accounts
-+ (EveryplayAccount *)account;
-
-+ (void)requestAccessWithCompletionHandler:(EveryplayAccessRequestCompletionHandler)aCompletionHandler;
-+ (void)requestAccessforScopes:(NSString *)scopes
-         withCompletionHandler:(EveryplayAccessRequestCompletionHandler)aCompletionHandler;
-+ (void)removeAccess;
-
-#pragma mark - Facebook authentication
-+ (BOOL)handleOpenURL:(NSURL *)url sourceApplication:(id)sourceApplication annotation:(id)annotation;
-
-#pragma mark - Configuration
-+ (void)setClientId:(NSString *)client
-       clientSecret:(NSString *)secret
-        redirectURI:(NSString *)url;
 
 #pragma mark - OAuth2 Flow
 + (BOOL)handleRedirectURL:(NSURL *)URL;

@@ -1,39 +1,22 @@
-Welcome to Everyplay. To get started, make sure you have an account registered, and that you have a unique client ID
-for your game. You can get these along with the latest integration instructions at https://developers.everyplay.com/
+Goodbye Everyplay. This project has been discontinued.
 
-You can always download the latest SDK upgrades directly from https://github.com/everyplay/everyplay-ios-sdk
+Last iOS release: https://github.com/everyplay/everyplay-ios-sdk
 
-Looking for Android version? See https://github.com/everyplay/everyplay-android-sdk
-<br />
-Looking for Unity plugin? See https://github.com/everyplay/everyplay-unity-sdk
-<br />
-Looking for Adobe AIR version? See https://github.com/everyplay/everyplay-air-sdk
+Last Android release: https://github.com/everyplay/everyplay-android-sdk
 
-Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html) with restrictions. Please see Everyplay Terms of Service at https://everyplay.com/developer-terms-of-service for more information.
+Last Unity release: https://github.com/everyplay/everyplay-unity-sdk
 
-For now, each SDK release has an expiration date. After expiring, there's a warning dialog on launch
-that recommends to upgrade the SDK. Apps downloaded from the App Store won't have this behaviour.
-
-Current and previous expiration dates:
-
-- 2018-09-12 (releases from 2.1.5 to CURRENT)
-- 2017-09-12 (releases from 2.1.2 to 2.1.4)
-- 2016-09-12 (releases from 2.1.0 to 2.1.1)
-- 2016-02-14 (releases from 1.9.9 to 2.0.1)
-- 2015-09-14 (releases from 1.9.6 to 1.9.8)
-- 2015-05-31 (releases from 1.9.4 to 1.9.5)
-- 2015-01-31 (releases from 1.8.1 to 1.9.3)
-- 2014-09-14 (releases from 1.8 to 1.8)
-- 2014-05-31 (releases from 1.7.4 to 1.7.6)
-- 2014-02-28 (releases from 1.7.1 to 1.7.3)
-- 2013-11-25 (releases from 1.6 to 1.7)
-- 2013-08-31 (releases from 1.4.1 to 1.5.1)
-- 2013-05-31 (releases from 1.0.13 to 1.4)
-- 2013-03-31 (releases from 1.0.10 to 1.0.12)
-- 2013-02-28 (releases from 1.0 to 1.0.9)
+Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html) with restrictions. ~~Please see Everyplay Terms of Service at https://everyplay.com/developer-terms-of-service for more information.~~
 
 Everyplay SDK/iOS - Release Notes
 =================================
+
+### v2.2.0 - Jun 26th 2018
+
+- Removed social functionality
+- Changed [[Everyplay sharedInstance] showEveryplaySharingModal] to open native share sheet instead of Everyplay Sharing Modal
+- Added [[Everyplay sharedInstance] getEveryplayFilepath] to get path to the recorded file (see USAGE.md)
+- Metal recording fixes
 
 ### v2.1.7 - Sep 8th 2017
 
