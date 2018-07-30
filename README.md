@@ -11,6 +11,10 @@ Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apac
 Everyplay SDK/iOS - Release Notes
 =================================
 
+### v2.2.1 - Jul 30th 2018
+
+- Metal recording fixes
+
 ### v2.2.0 - Jun 26th 2018
 
 - Removed social functionality
